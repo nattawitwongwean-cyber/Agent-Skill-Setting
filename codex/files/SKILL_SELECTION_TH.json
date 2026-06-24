@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "purpose": "Thai skill selection guide for Codex and Hermes manual/automatic skill routing",
+  "default_policy": "auto_select_minimal_canonical_skills",
+  "canonical_priority": [
+    "using-superpowers",
+    "writing-plans",
+    "systematic-debugging",
+    "test-driven-development",
+    "executing-plans",
+    "verification-before-completion",
+    "rtk-shell-guard",
+    "thai-token-optimizer",
+    "context-compression-checkpoint",
+    "handoff",
+    "adaptive-task-reporting",
+    "quota-truth-reporting",
+    "teamwork-preview-goal",
+    "subagent-driven-development",
+    "github-workflows",
+    "teacher-thai-workflow",
+    "news-new-ai-digest",
+    "google-workspace-intake",
+    "ui-ux-pro-max",
+    "gpt-image-prompt-library",
+    "adaptive-model-routing",
+    "antigravity-proxy-matrix"
+  ],
+  "thai_trigger_map": {
+    "วางแผน": [
+      "writing-plans"
+    ],
+    "แก้บั๊ก": [
+      "systematic-debugging"
+    ],
+    "แก้ปัญหา": [
+      "systematic-debugging"
+    ],
+    "เขียนโค้ด": [
+      "test-driven-development",
+      "verification-before-completion"
+    ],
+    "รันคำสั่ง": [
+      "rtk-shell-guard"
+    ],
+    "ลดโทเคน": [
+      "thai-token-optimizer"
+    ],
+    "สั้นมาก": [
+      "caveman"
+    ],
+    "บีบบริบท": [
+      "context-compression-checkpoint"
+    ],
+    "checkpoint": [
+      "context-compression-checkpoint"
+    ],
+    "ส่งต่อ": [
+      "handoff"
+    ],
+    "ทำงานเป็นทีม": [
+      "teamwork-preview-goal",
+      "subagent-driven-development"
+    ],
+    "subagent": [
+      "subagent-driven-development"
+    ],
+    "รายงานท้ายงาน": [
+      "adaptive-task-reporting",
+      "quota-truth-reporting"
+    ],
+    "โควต้า": [
+      "quota-truth-reporting"
+    ],
+    "โมเดล": [
+      "adaptive-model-routing"
+    ],
+    "github": [
+      "github-workflows"
+    ],
+    "repo": [
+      "github-workflows"
+    ],
+    "ข่าว AI": [
+      "news-new-ai-digest"
+    ],
+    "NEW | AI": [
+      "news-new-ai-digest"
+    ],
+    "งานโรงเรียน": [
+      "teacher-thai-workflow"
+    ],
+    "แผนสอน": [
+      "teacher-thai-workflow"
+    ],
+    "google": [
+      "google-workspace-intake"
+    ],
+    "ปฏิทิน": [
+      "google-workspace-intake"
+    ],
+    "UI": [
+      "ui-ux-pro-max"
+    ],
+    "UX": [
+      "ui-ux-pro-max"
+    ],
+    "ภาพ": [
+      "gpt-image-prompt-library"
+    ],
+    "antigravity": [
+      "antigravity-proxy-matrix"
+    ],
+    "ponytail": [
+      "ponytail"
+    ],
+    "ทำให้สั้นที่สุด": [
+      "ponytail"
+    ],
+    "ง่ายที่สุด": [
+      "ponytail"
+    ],
+    "YAGNI": [
+      "ponytail"
+    ],
+    "ไม่ over-engineer": [
+      "ponytail"
+    ],
+    "โค้ดบวม": [
+      "ponytail-review"
+    ],
+    "รีวิวโค้ดบวม": [
+      "ponytail-review"
+    ],
+    "audit over-engineering": [
+      "ponytail-audit"
+    ],
+    "หนี้โค้ด ponytail": [
+      "ponytail-debt"
+    ]
+  }
+}

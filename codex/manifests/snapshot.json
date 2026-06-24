@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-06-24T06:26:51.551677+00:00",
+  "source_codex_home": "/Users/nattawit/.codex",
+  "counts": {
+    "local_skill_dirs": 53,
+    "symlink_skills": 61,
+    "missing_skill_md_dirs": 1,
+    "enabled_plugins": 19
+  },
+  "excluded_sensitive_files": [
+    "auth.json",
+    "history.jsonl",
+    "session_index.jsonl",
+    "sessions/",
+    "log/",
+    "logs_*.sqlite*",
+    "state_*.sqlite*",
+    "memories_*.sqlite*",
+    "goals_*.sqlite*",
+    "browser/",
+    "attachments/",
+    "generated_images/"
+  ]
+}

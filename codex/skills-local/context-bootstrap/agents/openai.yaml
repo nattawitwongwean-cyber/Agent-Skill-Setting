@@ -1,0 +1,4 @@
+interface:
+  display_name: "Context Bootstrap"
+  short_description: "Create compact repo context for Codex"
+  default_prompt: "Set up or refresh Codex project context for this repository."

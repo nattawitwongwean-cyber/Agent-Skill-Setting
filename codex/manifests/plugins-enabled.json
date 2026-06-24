@@ -1,0 +1,78 @@
+[
+  {
+    "plugin": "documents@openai-primary-runtime",
+    "enabled": true
+  },
+  {
+    "plugin": "spreadsheets@openai-primary-runtime",
+    "enabled": true
+  },
+  {
+    "plugin": "presentations@openai-primary-runtime",
+    "enabled": true
+  },
+  {
+    "plugin": "codex-security@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "google-calendar@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "google-drive@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "openai-developers@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "github@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "gmail@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "vercel@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "build-web-apps@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "jam@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "superpowers@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "cloudflare@openai-curated",
+    "enabled": true
+  },
+  {
+    "plugin": "computer-use@openai-bundled",
+    "enabled": true
+  },
+  {
+    "plugin": "pdf@openai-primary-runtime",
+    "enabled": true
+  },
+  {
+    "plugin": "browser@openai-bundled",
+    "enabled": true
+  },
+  {
+    "plugin": "chrome@openai-bundled",
+    "enabled": true
+  },
+  {
+    "plugin": "template-creator@openai-primary-runtime",
+    "enabled": true
+  }
+]

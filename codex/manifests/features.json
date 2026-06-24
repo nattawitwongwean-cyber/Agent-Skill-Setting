@@ -1,0 +1,22 @@
+[
+  {
+    "feature": "goals",
+    "value": "true"
+  },
+  {
+    "feature": "multiagent",
+    "value": "true"
+  },
+  {
+    "feature": "js_repl",
+    "value": "false"
+  },
+  {
+    "feature": "memories",
+    "value": "true"
+  },
+  {
+    "feature": "chronicle",
+    "value": "true"
+  }
+]

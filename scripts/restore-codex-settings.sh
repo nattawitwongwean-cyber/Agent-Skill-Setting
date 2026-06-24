@@ -22,12 +22,19 @@ for file in AGENTS.md RTK.md SKILL_AUTOUSE.md SKILL_SELECTION_TH.md SKILL_SELECT
   fi
 done
 
-if [ -d "$repo_root/codex/skills-local" ]; then
+if [ -d "$repo_root/codex/skills-local" ] || [ -d "$repo_root/codex/skills-symlink-real" ]; then
   backup_if_exists "$codex_home/skills"
   mkdir -p "$codex_home/skills"
+fi
+
+if [ -d "$repo_root/codex/skills-local" ]; then
   cp -R "$repo_root/codex/skills-local/." "$codex_home/skills/"
+fi
+
+if [ -d "$repo_root/codex/skills-symlink-real" ]; then
+  cp -R "$repo_root/codex/skills-symlink-real/." "$codex_home/skills/"
 fi
 
 echo "Restored portable Codex settings to $codex_home"
 echo "Previous files were moved to $backup_dir"
-echo "Review codex/manifests/symlink-skills.json to reinstall vendor symlink skills."
+echo "Skills were restored as real directories."

@@ -1,246 +1,368 @@
 [
   {
     "name": "a11y-debugging",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/a11y-debugging"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/a11y-debugging",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/a11y-debugging",
+    "copied_as_real_files": true
   },
   {
     "name": "adaptive",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/adaptive"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/adaptive",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/adaptive",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-deploy",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-deploy"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-deploy",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-deploy",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-endpoint-management",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-endpoint-management"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-endpoint-management",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-endpoint-management",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-eval-flywheel",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-eval-flywheel"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-eval-flywheel",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-eval-flywheel",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-inference",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-inference"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-inference",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-inference",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-migrate-from-ai-studio",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-migrate-from-ai-studio"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-migrate-from-ai-studio",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-migrate-from-ai-studio",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-model-registry",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-model-registry"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-model-registry",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-model-registry",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-prompt-management",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-prompt-management"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-prompt-management",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-prompt-management",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-rag-engine-management",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-rag-engine-management"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-rag-engine-management",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-rag-engine-management",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-skill-registry",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-skill-registry"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-skill-registry",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-skill-registry",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-tuning",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning",
+    "copied_as_real_files": true
   },
   {
     "name": "agent-platform-tuning-management",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning-management"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning-management",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning-management",
+    "copied_as_real_files": true
   },
   {
     "name": "agp-9-upgrade",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/build/agp/agp-9-upgrade"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/build/agp/agp-9-upgrade",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/build/agp/agp-9-upgrade",
+    "copied_as_real_files": true
   },
   {
     "name": "alloydb-basics",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/alloydb-basics"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/alloydb-basics",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/alloydb-basics",
+    "copied_as_real_files": true
   },
   {
     "name": "android-cli",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/devtools/android-cli"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/devtools/android-cli",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/devtools/android-cli",
+    "copied_as_real_files": true
   },
   {
     "name": "bigquery-basics",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/bigquery-basics"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/bigquery-basics",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/bigquery-basics",
+    "copied_as_real_files": true
   },
   {
     "name": "brainstorming",
-    "target": "/Users/nattawit/.codex/superpowers/skills/brainstorming"
+    "target": "/Users/nattawit/.codex/superpowers/skills/brainstorming",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/brainstorming",
+    "copied_as_real_files": true
   },
   {
     "name": "chrome-devtools",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools",
+    "copied_as_real_files": true
   },
   {
     "name": "chrome-devtools-cli",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools-cli"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools-cli",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools-cli",
+    "copied_as_real_files": true
   },
   {
     "name": "chrome-extensions",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/chrome-extensions"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/chrome-extensions",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/chrome-extensions",
+    "copied_as_real_files": true
   },
   {
     "name": "cloud-run-basics",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-run-basics"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-run-basics",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-run-basics",
+    "copied_as_real_files": true
   },
   {
     "name": "cloud-sql-basics",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-sql-basics"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-sql-basics",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-sql-basics",
+    "copied_as_real_files": true
   },
   {
     "name": "debug-optimize-lcp",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/debug-optimize-lcp"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/debug-optimize-lcp",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/debug-optimize-lcp",
+    "copied_as_real_files": true
   },
   {
     "name": "dispatching-parallel-agents",
-    "target": "/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents"
+    "target": "/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents",
+    "copied_as_real_files": true
   },
   {
     "name": "edge-to-edge",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge",
+    "copied_as_real_files": true
   },
   {
     "name": "executing-plans",
-    "target": "/Users/nattawit/.codex/superpowers/skills/executing-plans"
+    "target": "/Users/nattawit/.codex/superpowers/skills/executing-plans",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/executing-plans",
+    "copied_as_real_files": true
   },
   {
     "name": "finishing-a-development-branch",
-    "target": "/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch"
+    "target": "/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch",
+    "copied_as_real_files": true
   },
   {
     "name": "firebase-basics",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/firebase-basics"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/firebase-basics",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/firebase-basics",
+    "copied_as_real_files": true
   },
   {
     "name": "gcloud",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gcloud"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gcloud",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gcloud",
+    "copied_as_real_files": true
   },
   {
     "name": "gemini-agents-api",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-agents-api"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-agents-api",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-agents-api",
+    "copied_as_real_files": true
   },
   {
     "name": "gemini-api",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-api"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-api",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-api",
+    "copied_as_real_files": true
   },
   {
     "name": "gemini-interactions-api",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-interactions-api"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-interactions-api",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-interactions-api",
+    "copied_as_real_files": true
   },
   {
     "name": "gke-basics",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gke-basics"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gke-basics",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gke-basics",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-networking-observability",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-networking-observability"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-networking-observability",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-networking-observability",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-recipe-auth",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-auth"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-auth",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-auth",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-recipe-onboarding",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-onboarding"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-onboarding",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-onboarding",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-waf-cost-optimization",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-cost-optimization"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-cost-optimization",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-cost-optimization",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-waf-operational-excellence",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-operational-excellence"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-operational-excellence",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-operational-excellence",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-waf-performance-optimization",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-performance-optimization"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-performance-optimization",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-performance-optimization",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-waf-reliability",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-reliability"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-reliability",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-reliability",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-waf-security",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-security"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-security",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-security",
+    "copied_as_real_files": true
   },
   {
     "name": "google-cloud-waf-sustainability",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-sustainability"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-sustainability",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-sustainability",
+    "copied_as_real_files": true
   },
   {
     "name": "memory-leak-debugging",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/memory-leak-debugging"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/memory-leak-debugging",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/memory-leak-debugging",
+    "copied_as_real_files": true
   },
   {
     "name": "migrate-xml-views-to-jetpack-compose",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose",
+    "copied_as_real_files": true
   },
   {
     "name": "modern-web-guidance",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/modern-web-guidance"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/modern-web-guidance",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/modern-web-guidance",
+    "copied_as_real_files": true
   },
   {
     "name": "navigation-3",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/navigation/navigation-3"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/navigation/navigation-3",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/navigation/navigation-3",
+    "copied_as_real_files": true
   },
   {
     "name": "perfetto-sql",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-sql"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-sql",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-sql",
+    "copied_as_real_files": true
   },
   {
     "name": "perfetto-trace-analysis",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-trace-analysis"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-trace-analysis",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-trace-analysis",
+    "copied_as_real_files": true
   },
   {
     "name": "r8-analyzer",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/performance/r8-analyzer"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/performance/r8-analyzer",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/performance/r8-analyzer",
+    "copied_as_real_files": true
   },
   {
     "name": "receiving-code-review",
-    "target": "/Users/nattawit/.codex/superpowers/skills/receiving-code-review"
+    "target": "/Users/nattawit/.codex/superpowers/skills/receiving-code-review",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/receiving-code-review",
+    "copied_as_real_files": true
   },
   {
     "name": "requesting-code-review",
-    "target": "/Users/nattawit/.codex/superpowers/skills/requesting-code-review"
+    "target": "/Users/nattawit/.codex/superpowers/skills/requesting-code-review",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/requesting-code-review",
+    "copied_as_real_files": true
   },
   {
     "name": "subagent-driven-development",
-    "target": "/Users/nattawit/.codex/superpowers/skills/subagent-driven-development"
+    "target": "/Users/nattawit/.codex/superpowers/skills/subagent-driven-development",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/subagent-driven-development",
+    "copied_as_real_files": true
   },
   {
     "name": "systematic-debugging",
-    "target": "/Users/nattawit/.codex/superpowers/skills/systematic-debugging"
+    "target": "/Users/nattawit/.codex/superpowers/skills/systematic-debugging",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/systematic-debugging",
+    "copied_as_real_files": true
   },
   {
     "name": "test-driven-development",
-    "target": "/Users/nattawit/.codex/superpowers/skills/test-driven-development"
+    "target": "/Users/nattawit/.codex/superpowers/skills/test-driven-development",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/test-driven-development",
+    "copied_as_real_files": true
   },
   {
     "name": "testing-setup",
-    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup"
+    "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup",
+    "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup",
+    "copied_as_real_files": true
   },
   {
     "name": "using-git-worktrees",
-    "target": "/Users/nattawit/.codex/superpowers/skills/using-git-worktrees"
+    "target": "/Users/nattawit/.codex/superpowers/skills/using-git-worktrees",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/using-git-worktrees",
+    "copied_as_real_files": true
   },
   {
     "name": "using-superpowers",
-    "target": "/Users/nattawit/.codex/superpowers/skills/using-superpowers"
+    "target": "/Users/nattawit/.codex/superpowers/skills/using-superpowers",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/using-superpowers",
+    "copied_as_real_files": true
   },
   {
     "name": "verification-before-completion",
-    "target": "/Users/nattawit/.codex/superpowers/skills/verification-before-completion"
+    "target": "/Users/nattawit/.codex/superpowers/skills/verification-before-completion",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/verification-before-completion",
+    "copied_as_real_files": true
   },
   {
     "name": "writing-plans",
-    "target": "/Users/nattawit/.codex/superpowers/skills/writing-plans"
+    "target": "/Users/nattawit/.codex/superpowers/skills/writing-plans",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/writing-plans",
+    "copied_as_real_files": true
   },
   {
     "name": "writing-skills",
-    "target": "/Users/nattawit/.codex/superpowers/skills/writing-skills"
+    "target": "/Users/nattawit/.codex/superpowers/skills/writing-skills",
+    "resolved": "/Users/nattawit/.codex/superpowers/skills/writing-skills",
+    "copied_as_real_files": true
   }
 ]

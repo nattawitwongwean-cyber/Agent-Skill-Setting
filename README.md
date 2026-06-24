@@ -11,6 +11,8 @@ images, or other machine-local runtime data.
 - `codex/files/` - portable Codex instruction files.
 - `codex/skills-local/` - local skill folders that contain real `SKILL.md`
   files.
+- `codex/skills-symlink-real/` - real copied files from skill symlink targets
+  such as Superpowers and Google skills.
 - `codex/manifests/` - generated inventory for skills, symlinks, plugins, and
   feature flags.
 - `scripts/generate-codex-snapshot.py` - regenerate the snapshot from the
@@ -26,4 +28,5 @@ From this repository root:
 bash scripts/restore-codex-settings.sh
 ```
 
-The restore script backs up existing files before writing replacements.
+The restore script backs up existing files before writing replacements. Restored
+skills are written back as real directories, not symlinks.

@@ -1,11 +1,12 @@
 # Codex Skill Snapshot
 
-Generated: 2026-06-24T06:26:51.551677+00:00
+Generated: 2026-06-24T09:24:45.648057+00:00
 
 ## Counts
 
 - Local skill dirs: 53
 - Symlink skills: 61
+- Symlink skills copied as real files: 61
 - Missing SKILL.md dirs: 1
 - Enabled plugins: 19
 
@@ -67,67 +68,67 @@ Generated: 2026-06-24T06:26:51.551677+00:00
 
 ## Symlink Skills
 
-- `a11y-debugging` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/a11y-debugging`
-- `adaptive` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/adaptive`
-- `agent-platform-deploy` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-deploy`
-- `agent-platform-endpoint-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-endpoint-management`
-- `agent-platform-eval-flywheel` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-eval-flywheel`
-- `agent-platform-inference` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-inference`
-- `agent-platform-migrate-from-ai-studio` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-migrate-from-ai-studio`
-- `agent-platform-model-registry` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-model-registry`
-- `agent-platform-prompt-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-prompt-management`
-- `agent-platform-rag-engine-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-rag-engine-management`
-- `agent-platform-skill-registry` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-skill-registry`
-- `agent-platform-tuning` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning`
-- `agent-platform-tuning-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning-management`
-- `agp-9-upgrade` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/build/agp/agp-9-upgrade`
-- `alloydb-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/alloydb-basics`
-- `android-cli` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/devtools/android-cli`
-- `bigquery-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/bigquery-basics`
-- `brainstorming` -> `/Users/nattawit/.codex/superpowers/skills/brainstorming`
-- `chrome-devtools` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools`
-- `chrome-devtools-cli` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools-cli`
-- `chrome-extensions` -> `/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/chrome-extensions`
-- `cloud-run-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-run-basics`
-- `cloud-sql-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-sql-basics`
-- `debug-optimize-lcp` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/debug-optimize-lcp`
-- `dispatching-parallel-agents` -> `/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents`
-- `edge-to-edge` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge`
-- `executing-plans` -> `/Users/nattawit/.codex/superpowers/skills/executing-plans`
-- `finishing-a-development-branch` -> `/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch`
-- `firebase-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/firebase-basics`
-- `gcloud` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gcloud`
-- `gemini-agents-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-agents-api`
-- `gemini-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-api`
-- `gemini-interactions-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-interactions-api`
-- `gke-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gke-basics`
-- `google-cloud-networking-observability` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-networking-observability`
-- `google-cloud-recipe-auth` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-auth`
-- `google-cloud-recipe-onboarding` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-onboarding`
-- `google-cloud-waf-cost-optimization` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-cost-optimization`
-- `google-cloud-waf-operational-excellence` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-operational-excellence`
-- `google-cloud-waf-performance-optimization` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-performance-optimization`
-- `google-cloud-waf-reliability` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-reliability`
-- `google-cloud-waf-security` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-security`
-- `google-cloud-waf-sustainability` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-sustainability`
-- `memory-leak-debugging` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/memory-leak-debugging`
-- `migrate-xml-views-to-jetpack-compose` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose`
-- `modern-web-guidance` -> `/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/modern-web-guidance`
-- `navigation-3` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/navigation/navigation-3`
-- `perfetto-sql` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-sql`
-- `perfetto-trace-analysis` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-trace-analysis`
-- `r8-analyzer` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/performance/r8-analyzer`
-- `receiving-code-review` -> `/Users/nattawit/.codex/superpowers/skills/receiving-code-review`
-- `requesting-code-review` -> `/Users/nattawit/.codex/superpowers/skills/requesting-code-review`
-- `subagent-driven-development` -> `/Users/nattawit/.codex/superpowers/skills/subagent-driven-development`
-- `systematic-debugging` -> `/Users/nattawit/.codex/superpowers/skills/systematic-debugging`
-- `test-driven-development` -> `/Users/nattawit/.codex/superpowers/skills/test-driven-development`
-- `testing-setup` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup`
-- `using-git-worktrees` -> `/Users/nattawit/.codex/superpowers/skills/using-git-worktrees`
-- `using-superpowers` -> `/Users/nattawit/.codex/superpowers/skills/using-superpowers`
-- `verification-before-completion` -> `/Users/nattawit/.codex/superpowers/skills/verification-before-completion`
-- `writing-plans` -> `/Users/nattawit/.codex/superpowers/skills/writing-plans`
-- `writing-skills` -> `/Users/nattawit/.codex/superpowers/skills/writing-skills`
+- `a11y-debugging` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/a11y-debugging` (copied)
+- `adaptive` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/adaptive` (copied)
+- `agent-platform-deploy` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-deploy` (copied)
+- `agent-platform-endpoint-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-endpoint-management` (copied)
+- `agent-platform-eval-flywheel` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-eval-flywheel` (copied)
+- `agent-platform-inference` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-inference` (copied)
+- `agent-platform-migrate-from-ai-studio` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-migrate-from-ai-studio` (copied)
+- `agent-platform-model-registry` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-model-registry` (copied)
+- `agent-platform-prompt-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-prompt-management` (copied)
+- `agent-platform-rag-engine-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-rag-engine-management` (copied)
+- `agent-platform-skill-registry` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-skill-registry` (copied)
+- `agent-platform-tuning` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning` (copied)
+- `agent-platform-tuning-management` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/agent-platform-tuning-management` (copied)
+- `agp-9-upgrade` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/build/agp/agp-9-upgrade` (copied)
+- `alloydb-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/alloydb-basics` (copied)
+- `android-cli` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/devtools/android-cli` (copied)
+- `bigquery-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/bigquery-basics` (copied)
+- `brainstorming` -> `/Users/nattawit/.codex/superpowers/skills/brainstorming` (copied)
+- `chrome-devtools` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools` (copied)
+- `chrome-devtools-cli` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools-cli` (copied)
+- `chrome-extensions` -> `/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/chrome-extensions` (copied)
+- `cloud-run-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-run-basics` (copied)
+- `cloud-sql-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-sql-basics` (copied)
+- `debug-optimize-lcp` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/debug-optimize-lcp` (copied)
+- `dispatching-parallel-agents` -> `/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents` (copied)
+- `edge-to-edge` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge` (copied)
+- `executing-plans` -> `/Users/nattawit/.codex/superpowers/skills/executing-plans` (copied)
+- `finishing-a-development-branch` -> `/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch` (copied)
+- `firebase-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/firebase-basics` (copied)
+- `gcloud` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gcloud` (copied)
+- `gemini-agents-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-agents-api` (copied)
+- `gemini-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-api` (copied)
+- `gemini-interactions-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-interactions-api` (copied)
+- `gke-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gke-basics` (copied)
+- `google-cloud-networking-observability` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-networking-observability` (copied)
+- `google-cloud-recipe-auth` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-auth` (copied)
+- `google-cloud-recipe-onboarding` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-recipe-onboarding` (copied)
+- `google-cloud-waf-cost-optimization` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-cost-optimization` (copied)
+- `google-cloud-waf-operational-excellence` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-operational-excellence` (copied)
+- `google-cloud-waf-performance-optimization` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-performance-optimization` (copied)
+- `google-cloud-waf-reliability` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-reliability` (copied)
+- `google-cloud-waf-security` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-security` (copied)
+- `google-cloud-waf-sustainability` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/google-cloud-waf-sustainability` (copied)
+- `memory-leak-debugging` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/memory-leak-debugging` (copied)
+- `migrate-xml-views-to-jetpack-compose` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/jetpack-compose/migration/migrate-xml-views-to-jetpack-compose` (copied)
+- `modern-web-guidance` -> `/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/modern-web-guidance` (copied)
+- `navigation-3` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/navigation/navigation-3` (copied)
+- `perfetto-sql` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-sql` (copied)
+- `perfetto-trace-analysis` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-trace-analysis` (copied)
+- `r8-analyzer` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/performance/r8-analyzer` (copied)
+- `receiving-code-review` -> `/Users/nattawit/.codex/superpowers/skills/receiving-code-review` (copied)
+- `requesting-code-review` -> `/Users/nattawit/.codex/superpowers/skills/requesting-code-review` (copied)
+- `subagent-driven-development` -> `/Users/nattawit/.codex/superpowers/skills/subagent-driven-development` (copied)
+- `systematic-debugging` -> `/Users/nattawit/.codex/superpowers/skills/systematic-debugging` (copied)
+- `test-driven-development` -> `/Users/nattawit/.codex/superpowers/skills/test-driven-development` (copied)
+- `testing-setup` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup` (copied)
+- `using-git-worktrees` -> `/Users/nattawit/.codex/superpowers/skills/using-git-worktrees` (copied)
+- `using-superpowers` -> `/Users/nattawit/.codex/superpowers/skills/using-superpowers` (copied)
+- `verification-before-completion` -> `/Users/nattawit/.codex/superpowers/skills/verification-before-completion` (copied)
+- `writing-plans` -> `/Users/nattawit/.codex/superpowers/skills/writing-plans` (copied)
+- `writing-skills` -> `/Users/nattawit/.codex/superpowers/skills/writing-skills` (copied)
 
 ## Missing SKILL.md Directories
 

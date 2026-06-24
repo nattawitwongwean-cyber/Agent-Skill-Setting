@@ -62,12 +62,30 @@ def copy_safe_files() -> None:
             shutil.copy2(src, target / name)
 
 
+def copy_skill_tree(source: Path, dest: Path) -> None:
+    shutil.copytree(
+        source,
+        dest,
+        ignore=shutil.ignore_patterns(
+            ".git",
+            ".DS_Store",
+            "__pycache__",
+            "node_modules",
+            ".coverage",
+            ".pytest_cache",
+        ),
+    )
+    sanitize_tree(dest)
+
+
 def copy_local_skills() -> tuple[list[dict[str, str]], list[dict[str, str]], list[str]]:
     source = CODEX_HOME / "skills"
-    target = OUT / "skills-local"
-    if target.exists():
-        shutil.rmtree(target)
-    target.mkdir(parents=True, exist_ok=True)
+    local_target = OUT / "skills-local"
+    symlink_target = OUT / "skills-symlink-real"
+    for target in (local_target, symlink_target):
+        if target.exists():
+            shutil.rmtree(target)
+        target.mkdir(parents=True, exist_ok=True)
 
     local: list[dict[str, str]] = []
     symlinks: list[dict[str, str]] = []
@@ -77,7 +95,17 @@ def copy_local_skills() -> tuple[list[dict[str, str]], list[dict[str, str]], lis
         if item.name == ".system":
             continue
         if item.is_symlink():
-            symlinks.append({"name": item.name, "target": os.readlink(item)})
+            resolved = item.resolve()
+            copied = False
+            if (resolved / "SKILL.md").exists():
+                copy_skill_tree(resolved, symlink_target / item.name)
+                copied = True
+            symlinks.append({
+                "name": item.name,
+                "target": os.readlink(item),
+                "resolved": str(resolved),
+                "copied_as_real_files": copied,
+            })
             continue
         if not item.is_dir():
             continue
@@ -85,20 +113,8 @@ def copy_local_skills() -> tuple[list[dict[str, str]], list[dict[str, str]], lis
         if not skill_file.exists():
             missing.append(item.name)
             continue
-        dest = target / item.name
-        shutil.copytree(
-            item,
-            dest,
-            ignore=shutil.ignore_patterns(
-                ".git",
-                ".DS_Store",
-                "__pycache__",
-                "node_modules",
-                ".coverage",
-                ".pytest_cache",
-            ),
-        )
-        sanitize_tree(dest)
+        dest = local_target / item.name
+        copy_skill_tree(item, dest)
         meta = read_skill_metadata(skill_file)
         local.append({"folder": item.name, **meta})
 
@@ -163,6 +179,7 @@ def write_manifests(
         "counts": {
             "local_skill_dirs": len(local),
             "symlink_skills": len(symlinks),
+            "symlink_skills_copied_as_real_files": sum(1 for item in symlinks if item["copied_as_real_files"]),
             "missing_skill_md_dirs": len(missing),
             "enabled_plugins": enabled_count,
         },
@@ -189,6 +206,7 @@ def write_manifests(
         "",
         f"- Local skill dirs: {len(local)}",
         f"- Symlink skills: {len(symlinks)}",
+        f"- Symlink skills copied as real files: {sum(1 for item in symlinks if item['copied_as_real_files'])}",
         f"- Missing SKILL.md dirs: {len(missing)}",
         f"- Enabled plugins: {enabled_count}",
         "",
@@ -203,7 +221,8 @@ def write_manifests(
             lines.append(f"- `{item['folder']}`")
     lines += ["", "## Symlink Skills", ""]
     for item in symlinks:
-        lines.append(f"- `{item['name']}` -> `{item['target']}`")
+        status = "copied" if item["copied_as_real_files"] else "not copied"
+        lines.append(f"- `{item['name']}` -> `{item['target']}` ({status})")
     lines += ["", "## Missing SKILL.md Directories", ""]
     lines.extend([f"- `{item}`" for item in missing] or ["- None"])
     lines += ["", "## Enabled Plugins", ""]

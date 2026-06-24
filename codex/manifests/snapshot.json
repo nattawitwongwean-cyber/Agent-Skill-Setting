@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-06-24T06:26:51.551677+00:00",
+  "generated_at": "2026-06-24T09:24:45.648057+00:00",
   "source_codex_home": "/Users/nattawit/.codex",
   "counts": {
     "local_skill_dirs": 53,
     "symlink_skills": 61,
+    "symlink_skills_copied_as_real_files": 61,
     "missing_skill_md_dirs": 1,
     "enabled_plugins": 19
   },

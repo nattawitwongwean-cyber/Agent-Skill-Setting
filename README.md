@@ -15,6 +15,8 @@ images, or other machine-local runtime data.
   such as Superpowers and Google skills.
 - `codex/manifests/` - generated inventory for skills, symlinks, plugins, and
   feature flags.
+- `codex/manifests/SOURCE_REPOSITORIES.md` - install-source inventory for
+  repositories and CLIs that were used to build this setup.
 - `scripts/generate-codex-snapshot.py` - regenerate the snapshot from the
   current machine.
 - `scripts/restore-codex-settings.sh` - restore the portable files into

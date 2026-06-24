@@ -8,6 +8,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 from pathlib import Path
 
 
@@ -41,6 +42,39 @@ EXCLUDED_SENSITIVE_FILES = [
 SANITIZE_REPLACEMENTS = {
     "ghp_" + "abc123": "github-token-example-redacted",
 }
+
+MANUAL_SOURCE_REPOSITORIES = [
+    {
+        "name": "impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "install_hint": "npx skills add pbakaus/impeccable",
+        "notes": "Skill imported via the skills CLI; current Codex copy is stored under codex/skills-local/impeccable.",
+    },
+    {
+        "name": "mattpocock-skills",
+        "url": "https://github.com/mattpocock/skills.git",
+        "install_hint": "git clone https://github.com/mattpocock/skills.git",
+        "notes": "Imported and converted into local Codex skills; see setup-matt-pocock-skills and related local skill folders.",
+    },
+    {
+        "name": "rtk",
+        "url": "https://github.com/rtk-ai/rtk",
+        "install_hint": "brew install rtk",
+        "notes": "Shell guard is configured through RTK.md; command available at /opt/homebrew/bin/rtk on this machine.",
+    },
+    {
+        "name": "cocoindex",
+        "url": "https://github.com/cocoindex-io/cocoindex.git",
+        "install_hint": "git clone https://github.com/cocoindex-io/cocoindex.git",
+        "notes": "Recorded from prior evaluation request; not copied as a Codex skill in this snapshot.",
+    },
+    {
+        "name": "9router",
+        "url": "https://github.com/decolua/9router.git",
+        "install_hint": "git clone https://github.com/decolua/9router.git",
+        "notes": "Recorded from prior routing/Hermes architecture discussion; not copied as a Codex skill in this snapshot.",
+    },
+]
 
 
 def read_skill_metadata(skill_file: Path) -> dict[str, str]:
@@ -161,12 +195,68 @@ def read_config_inventory() -> tuple[list[dict[str, object]], list[dict[str, str
     return plugins, features
 
 
+def git_remote_url(repo: Path) -> str:
+    try:
+        output = subprocess.check_output(
+            ["git", "-C", str(repo), "remote", "get-url", "origin"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return ""
+    return output.strip()
+
+
+def current_git_commit(repo: Path) -> str:
+    try:
+        output = subprocess.check_output(
+            ["git", "-C", str(repo), "rev-parse", "--short", "HEAD"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return ""
+    return output.strip()
+
+
+def discover_source_repositories() -> list[dict[str, str]]:
+    repositories: list[dict[str, str]] = []
+    seen_urls: set[str] = set()
+
+    for git_dir in sorted(CODEX_HOME.rglob(".git"), key=lambda p: str(p).lower()):
+        if ".tmp" in git_dir.parts:
+            continue
+        repo = git_dir.parent
+        url = git_remote_url(repo)
+        if not url or url in seen_urls:
+            continue
+        seen_urls.add(url)
+        repositories.append(
+            {
+                "name": repo.name,
+                "url": url,
+                "local_path": str(repo),
+                "commit": current_git_commit(repo),
+                "source": "discovered-git-remote",
+            }
+        )
+
+    for item in MANUAL_SOURCE_REPOSITORIES:
+        if item["url"] in seen_urls:
+            continue
+        repositories.append({**item, "source": "manual-install-record"})
+        seen_urls.add(item["url"])
+
+    return repositories
+
+
 def write_manifests(
     local: list[dict[str, str]],
     symlinks: list[dict[str, str]],
     missing: list[str],
     plugins: list[dict[str, object]],
     features: list[dict[str, str]],
+    repositories: list[dict[str, str]],
 ) -> None:
     out = OUT / "manifests"
     out.mkdir(parents=True, exist_ok=True)
@@ -182,6 +272,7 @@ def write_manifests(
             "symlink_skills_copied_as_real_files": sum(1 for item in symlinks if item["copied_as_real_files"]),
             "missing_skill_md_dirs": len(missing),
             "enabled_plugins": enabled_count,
+            "source_repositories": len(repositories),
         },
         "excluded_sensitive_files": EXCLUDED_SENSITIVE_FILES,
     }
@@ -193,6 +284,7 @@ def write_manifests(
         "missing-skill-md.json": missing,
         "plugins-enabled.json": plugins,
         "features.json": features,
+        "source-repositories.json": repositories,
     }
     for name, data in files.items():
         (out / name).write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -209,6 +301,7 @@ def write_manifests(
         f"- Symlink skills copied as real files: {sum(1 for item in symlinks if item['copied_as_real_files'])}",
         f"- Missing SKILL.md dirs: {len(missing)}",
         f"- Enabled plugins: {enabled_count}",
+        f"- Source repositories: {len(repositories)}",
         "",
         "## Local Skills",
         "",
@@ -229,14 +322,47 @@ def write_manifests(
     for item in plugins:
         if item["enabled"]:
             lines.append(f"- `{item['plugin']}`")
+    lines += ["", "## Source Repositories", ""]
+    for item in repositories:
+        detail = item.get("install_hint") or item.get("local_path") or ""
+        suffix = f" - {detail}" if detail else ""
+        lines.append(f"- `{item['name']}` - {item['url']}{suffix}")
     (out / "SUMMARY.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    repo_lines = [
+        "# Source Repositories",
+        "",
+        "Install sources and reference repositories used to build this Codex skill snapshot.",
+        "This is an inventory only; secrets, sessions, logs, and runtime state are intentionally excluded.",
+        "",
+    ]
+    for item in repositories:
+        repo_lines.extend(
+            [
+                f"## {item['name']}",
+                "",
+                f"- URL: {item['url']}",
+                f"- Source: {item.get('source', '')}",
+            ]
+        )
+        if item.get("local_path"):
+            repo_lines.append(f"- Local path at snapshot time: `{item['local_path']}`")
+        if item.get("commit"):
+            repo_lines.append(f"- Commit at snapshot time: `{item['commit']}`")
+        if item.get("install_hint"):
+            repo_lines.append(f"- Install hint: `{item['install_hint']}`")
+        if item.get("notes"):
+            repo_lines.append(f"- Notes: {item['notes']}")
+        repo_lines.append("")
+    (out / "SOURCE_REPOSITORIES.md").write_text("\n".join(repo_lines), encoding="utf-8")
 
 
 def main() -> int:
     copy_safe_files()
     local, symlinks, missing = copy_local_skills()
     plugins, features = read_config_inventory()
-    write_manifests(local, symlinks, missing, plugins, features)
+    repositories = discover_source_repositories()
+    write_manifests(local, symlinks, missing, plugins, features, repositories)
     return 0
 
 

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "gpt-image-2-prompts",
+    "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts.git",
+    "local_path": "/Users/nattawit/.codex/resources/gpt-image-2-prompts",
+    "commit": "b7add2c",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "superpowers",
+    "url": "https://github.com/obra/superpowers.git",
+    "local_path": "/Users/nattawit/.codex/superpowers",
+    "commit": "6fd4507",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "android-skills",
+    "url": "https://github.com/android/skills.git",
+    "local_path": "/Users/nattawit/.codex/vendor/google-skills/android-skills",
+    "commit": "d41bdf5",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "chrome-devtools-mcp",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp.git",
+    "local_path": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp",
+    "commit": "f90f863",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "google-skills",
+    "url": "https://github.com/google/skills.git",
+    "local_path": "/Users/nattawit/.codex/vendor/google-skills/google-skills",
+    "commit": "fc4af87",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "modern-web-guidance",
+    "url": "https://github.com/GoogleChrome/modern-web-guidance.git",
+    "local_path": "/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance",
+    "commit": "d0f7544",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "skills",
+    "url": "https://github.com/openai/skills.git",
+    "local_path": "/Users/nattawit/.codex/vendor_imports/skills",
+    "commit": "49f948f",
+    "source": "discovered-git-remote"
+  },
+  {
+    "name": "impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "install_hint": "npx skills add pbakaus/impeccable",
+    "notes": "Skill imported via the skills CLI; current Codex copy is stored under codex/skills-local/impeccable.",
+    "source": "manual-install-record"
+  },
+  {
+    "name": "mattpocock-skills",
+    "url": "https://github.com/mattpocock/skills.git",
+    "install_hint": "git clone https://github.com/mattpocock/skills.git",
+    "notes": "Imported and converted into local Codex skills; see setup-matt-pocock-skills and related local skill folders.",
+    "source": "manual-install-record"
+  },
+  {
+    "name": "rtk",
+    "url": "https://github.com/rtk-ai/rtk",
+    "install_hint": "brew install rtk",
+    "notes": "Shell guard is configured through RTK.md; command available at /opt/homebrew/bin/rtk on this machine.",
+    "source": "manual-install-record"
+  },
+  {
+    "name": "cocoindex",
+    "url": "https://github.com/cocoindex-io/cocoindex.git",
+    "install_hint": "git clone https://github.com/cocoindex-io/cocoindex.git",
+    "notes": "Recorded from prior evaluation request; not copied as a Codex skill in this snapshot.",
+    "source": "manual-install-record"
+  },
+  {
+    "name": "9router",
+    "url": "https://github.com/decolua/9router.git",
+    "install_hint": "git clone https://github.com/decolua/9router.git",
+    "notes": "Recorded from prior routing/Hermes architecture discussion; not copied as a Codex skill in this snapshot.",
+    "source": "manual-install-record"
+  }
+]

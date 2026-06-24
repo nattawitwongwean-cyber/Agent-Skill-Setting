@@ -1,6 +1,6 @@
 # Codex Skill Snapshot
 
-Generated: 2026-06-24T09:24:45.648057+00:00
+Generated: 2026-06-24T15:00:25.530431+00:00
 
 ## Counts
 
@@ -9,6 +9,7 @@ Generated: 2026-06-24T09:24:45.648057+00:00
 - Symlink skills copied as real files: 61
 - Missing SKILL.md dirs: 1
 - Enabled plugins: 19
+- Source repositories: 12
 
 ## Local Skills
 
@@ -155,3 +156,18 @@ Generated: 2026-06-24T09:24:45.648057+00:00
 - `browser@openai-bundled`
 - `chrome@openai-bundled`
 - `template-creator@openai-primary-runtime`
+
+## Source Repositories
+
+- `gpt-image-2-prompts` - https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts.git - /Users/nattawit/.codex/resources/gpt-image-2-prompts
+- `superpowers` - https://github.com/obra/superpowers.git - /Users/nattawit/.codex/superpowers
+- `android-skills` - https://github.com/android/skills.git - /Users/nattawit/.codex/vendor/google-skills/android-skills
+- `chrome-devtools-mcp` - https://github.com/ChromeDevTools/chrome-devtools-mcp.git - /Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp
+- `google-skills` - https://github.com/google/skills.git - /Users/nattawit/.codex/vendor/google-skills/google-skills
+- `modern-web-guidance` - https://github.com/GoogleChrome/modern-web-guidance.git - /Users/nattawit/.codex/vendor/google-skills/modern-web-guidance
+- `skills` - https://github.com/openai/skills.git - /Users/nattawit/.codex/vendor_imports/skills
+- `impeccable` - https://github.com/pbakaus/impeccable - npx skills add pbakaus/impeccable
+- `mattpocock-skills` - https://github.com/mattpocock/skills.git - git clone https://github.com/mattpocock/skills.git
+- `rtk` - https://github.com/rtk-ai/rtk - brew install rtk
+- `cocoindex` - https://github.com/cocoindex-io/cocoindex.git - git clone https://github.com/cocoindex-io/cocoindex.git
+- `9router` - https://github.com/decolua/9router.git - git clone https://github.com/decolua/9router.git

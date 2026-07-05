@@ -1,14 +1,14 @@
 # Codex Skill Snapshot
 
-Generated: 2026-06-24T15:00:25.530431+00:00
+Generated: 2026-07-05T18:18:55.180754+00:00
 
 ## Counts
 
 - Local skill dirs: 53
-- Symlink skills: 61
-- Symlink skills copied as real files: 61
-- Missing SKILL.md dirs: 1
-- Enabled plugins: 19
+- Symlink skills: 47
+- Symlink skills copied as real files: 47
+- Missing SKILL.md dirs: 0
+- Enabled plugins: 18
 - Source repositories: 12
 
 ## Local Skills
@@ -52,10 +52,10 @@ Generated: 2026-06-24T15:00:25.530431+00:00
 - `scaffold-exercises` - Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
 - `setup-matt-pocock-skills` - Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.
 - `setup-pre-commit` - Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.
-- `superpowers-bootstrap` - Use when an Antigravity-style Superpowers bootstrap is requested in Codex - maps the bootstrap behavior to Codex's using-superpowers skill
+- `superpowers-bootstrap` - Use when an Antigravity-style Superpowers bootstrap is requested in Codex - maps the bootstrap behavior to Codex's superpowers:using-superpowers skill
 - `tdd` - Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions "red-green-refactor", wants integration tests, or asks for test-first development.
 - `teacher-thai-workflow` - >
-- `teamwork-preview` - Use when an Antigravity-style teamwork-preview workflow is requested in Codex - maps to the Codex-native subagent-driven-development workflow.
+- `teamwork-preview` - Use when an Antigravity-style teamwork-preview workflow is requested in Codex - maps to the Codex-native superpowers:subagent-driven-development workflow.
 - `teamwork-preview-goal` - >
 - `thai-token-optimizer` - >
 - `to-issues` - Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.
@@ -64,7 +64,7 @@ Generated: 2026-06-24T15:00:25.530431+00:00
 - `ui-styling` - Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.
 - `ui-ux-pro-max` - "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples."
 - `write-a-skill` - Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.
-- `writing-workflows` - Use when an Antigravity-style workflow or skill authoring task is requested in Codex - maps to Superpowers writing-skills
+- `writing-workflows` - Use when an Antigravity-style workflow or skill authoring task is requested in Codex - maps to Superpowers superpowers:writing-skills
 - `zoom-out` - Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.
 
 ## Symlink Skills
@@ -86,17 +86,13 @@ Generated: 2026-06-24T15:00:25.530431+00:00
 - `alloydb-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/alloydb-basics` (copied)
 - `android-cli` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/devtools/android-cli` (copied)
 - `bigquery-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/bigquery-basics` (copied)
-- `brainstorming` -> `/Users/nattawit/.codex/superpowers/skills/brainstorming` (copied)
 - `chrome-devtools` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools` (copied)
 - `chrome-devtools-cli` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools-cli` (copied)
 - `chrome-extensions` -> `/Users/nattawit/.codex/vendor/google-skills/modern-web-guidance/skills/chrome-extensions` (copied)
 - `cloud-run-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-run-basics` (copied)
 - `cloud-sql-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/cloud-sql-basics` (copied)
 - `debug-optimize-lcp` -> `/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/debug-optimize-lcp` (copied)
-- `dispatching-parallel-agents` -> `/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents` (copied)
 - `edge-to-edge` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge` (copied)
-- `executing-plans` -> `/Users/nattawit/.codex/superpowers/skills/executing-plans` (copied)
-- `finishing-a-development-branch` -> `/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch` (copied)
 - `firebase-basics` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/firebase-basics` (copied)
 - `gcloud` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gcloud` (copied)
 - `gemini-agents-api` -> `/Users/nattawit/.codex/vendor/google-skills/google-skills/skills/cloud/gemini-agents-api` (copied)
@@ -119,21 +115,11 @@ Generated: 2026-06-24T15:00:25.530431+00:00
 - `perfetto-sql` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-sql` (copied)
 - `perfetto-trace-analysis` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/profilers/perfetto-trace-analysis` (copied)
 - `r8-analyzer` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/performance/r8-analyzer` (copied)
-- `receiving-code-review` -> `/Users/nattawit/.codex/superpowers/skills/receiving-code-review` (copied)
-- `requesting-code-review` -> `/Users/nattawit/.codex/superpowers/skills/requesting-code-review` (copied)
-- `subagent-driven-development` -> `/Users/nattawit/.codex/superpowers/skills/subagent-driven-development` (copied)
-- `systematic-debugging` -> `/Users/nattawit/.codex/superpowers/skills/systematic-debugging` (copied)
-- `test-driven-development` -> `/Users/nattawit/.codex/superpowers/skills/test-driven-development` (copied)
 - `testing-setup` -> `/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup` (copied)
-- `using-git-worktrees` -> `/Users/nattawit/.codex/superpowers/skills/using-git-worktrees` (copied)
-- `using-superpowers` -> `/Users/nattawit/.codex/superpowers/skills/using-superpowers` (copied)
-- `verification-before-completion` -> `/Users/nattawit/.codex/superpowers/skills/verification-before-completion` (copied)
-- `writing-plans` -> `/Users/nattawit/.codex/superpowers/skills/writing-plans` (copied)
-- `writing-skills` -> `/Users/nattawit/.codex/superpowers/skills/writing-skills` (copied)
 
 ## Missing SKILL.md Directories
 
-- `subagent-development`
+- None
 
 ## Enabled Plugins
 
@@ -150,22 +136,21 @@ Generated: 2026-06-24T15:00:25.530431+00:00
 - `build-web-apps@openai-curated`
 - `jam@openai-curated`
 - `superpowers@openai-curated`
-- `cloudflare@openai-curated`
-- `computer-use@openai-bundled`
 - `pdf@openai-primary-runtime`
+- `template-creator@openai-primary-runtime`
 - `browser@openai-bundled`
 - `chrome@openai-bundled`
-- `template-creator@openai-primary-runtime`
+- `computer-use@openai-bundled`
 
 ## Source Repositories
 
 - `gpt-image-2-prompts` - https://github.com/EvoLinkAI/awesome-gpt-image-2-API-and-Prompts.git - /Users/nattawit/.codex/resources/gpt-image-2-prompts
-- `superpowers` - https://github.com/obra/superpowers.git - /Users/nattawit/.codex/superpowers
 - `android-skills` - https://github.com/android/skills.git - /Users/nattawit/.codex/vendor/google-skills/android-skills
 - `chrome-devtools-mcp` - https://github.com/ChromeDevTools/chrome-devtools-mcp.git - /Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp
 - `google-skills` - https://github.com/google/skills.git - /Users/nattawit/.codex/vendor/google-skills/google-skills
 - `modern-web-guidance` - https://github.com/GoogleChrome/modern-web-guidance.git - /Users/nattawit/.codex/vendor/google-skills/modern-web-guidance
 - `skills` - https://github.com/openai/skills.git - /Users/nattawit/.codex/vendor_imports/skills
+- `superpowers` - https://github.com/obra/superpowers.git - Install or enable superpowers@openai-curated in Codex; clone only if you need source inspection.
 - `impeccable` - https://github.com/pbakaus/impeccable - npx skills add pbakaus/impeccable
 - `mattpocock-skills` - https://github.com/mattpocock/skills.git - git clone https://github.com/mattpocock/skills.git
 - `rtk` - https://github.com/rtk-ai/rtk - brew install rtk

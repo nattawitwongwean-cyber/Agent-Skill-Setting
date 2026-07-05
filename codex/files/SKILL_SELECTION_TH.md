@@ -14,12 +14,12 @@
 
 | สถานการณ์ที่ผู้ใช้พูด | ทักษะหลัก | คำอธิบายภาษาไทย | หมายเหตุ |
 |---|---|---|---|
-| วางแผน, ออกแบบงาน, ทำ roadmap | `writing-plans` | วางแผนเป็นขั้นตอน มีขอบเขต งานย่อย และ test plan | ใช้ก่อนลงมือเมื่อ scope ใหญ่ |
-| ยังไม่ชัดว่าจะทำทางไหนดี | `brainstorming` | สำรวจทางเลือกก่อนตัดสินใจ ลดการแก้ผิดทาง | เหมาะกับงานเสี่ยงหรือมีหลายทาง |
-| แก้บั๊ก, ระบบพัง, หาสาเหตุ | `systematic-debugging` | ไล่ปัญหาเป็นหลักฐาน ไม่เดาเร็วเกินไป | ต้องมี hypothesis/test/evidence |
-| เขียนโค้ดหรือแก้โค้ดที่ต้องมั่นใจ | `test-driven-development` | ให้คิด test/verification ก่อนหรือระหว่างแก้ | ไม่จำเป็นต้อง TDD เต็มทุกงาน แต่ต้องตรวจผล |
-| ทำตามแผนที่อนุมัติแล้ว | `executing-plans` | ลงมือทีละขั้นตามแผนและอัปเดตสถานะ | ใช้กับงานยาว/หลายไฟล์ |
-| ก่อนบอกว่าเสร็จ | `verification-before-completion` | ห้ามสรุปว่าสำเร็จถ้ายังไม่มีหลักฐานสด | สำคัญมากกับงานโค้ด/deploy |
+| วางแผน, ออกแบบงาน, ทำ roadmap | `superpowers:writing-plans` | วางแผนเป็นขั้นตอน มีขอบเขต งานย่อย และ test plan | ใช้ก่อนลงมือเมื่อ scope ใหญ่ |
+| ยังไม่ชัดว่าจะทำทางไหนดี | `superpowers:brainstorming` | สำรวจทางเลือกก่อนตัดสินใจ ลดการแก้ผิดทาง | เหมาะกับงานเสี่ยงหรือมีหลายทาง |
+| แก้บั๊ก, ระบบพัง, หาสาเหตุ | `superpowers:systematic-debugging` | ไล่ปัญหาเป็นหลักฐาน ไม่เดาเร็วเกินไป | ต้องมี hypothesis/test/evidence |
+| เขียนโค้ดหรือแก้โค้ดที่ต้องมั่นใจ | `superpowers:test-driven-development` | ให้คิด test/verification ก่อนหรือระหว่างแก้ | ไม่จำเป็นต้อง TDD เต็มทุกงาน แต่ต้องตรวจผล |
+| ทำตามแผนที่อนุมัติแล้ว | `superpowers:executing-plans` | ลงมือทีละขั้นตามแผนและอัปเดตสถานะ | ใช้กับงานยาว/หลายไฟล์ |
+| ก่อนบอกว่าเสร็จ | `superpowers:verification-before-completion` | ห้ามสรุปว่าสำเร็จถ้ายังไม่มีหลักฐานสด | สำคัญมากกับงานโค้ด/deploy |
 | รันคำสั่ง shell/terminal/ssh | `rtk-shell-guard` | บังคับใช้ `rtk` เพื่อลด token และจัด output ให้อ่านง่าย | ใช้เสมอกับ shell command |
 | ลดโทเคน/ตอบไทยกระชับ | `thai-token-optimizer` | ภาษาไทยกระชับ แต่ไม่ตัดสาระสำคัญ | ค่าเริ่มต้นสำหรับคำตอบภาษาไทย |
 | ต้องสั้นมาก/โควต้าเสี่ยง | `caveman` | โหมดอัดสั้นมาก ใช้เมื่อผู้ใช้สั่งหรือ quota pressure สูง | อย่าใช้กับงานที่ต้องอธิบายละเอียด |
@@ -29,7 +29,7 @@
 | รายงานท้ายงาน | `adaptive-task-reporting` | รายงานตามขนาดงาน มี model/route/หลักฐาน/สิ่งที่เปลี่ยน | ลดรายงานย้อนแย้ง |
 | รายงานโควต้า/โมเดล/route | `quota-truth-reporting` | รายงานจาก runtime truth/live source เท่านั้น ไม่เดา | ถ้า source stale ต้องบอก stale/unavailable |
 | งานใหญ่ อยากให้ทำเป็นทีม | `teamwork-preview-goal` | แตกงานแบบ Antigravity teamwork-preview มีเป้าหมาย/ขอบเขต/ผู้ตรวจ | ใช้ก่อน dispatch งานใหญ่ |
-| ส่งงานให้ subagent | `subagent-driven-development` | มอบหมาย subagent แบบ micro-plan มี scope/output/verification | ใช้เมื่อแบ่งงานเป็นอิสระได้ |
+| ส่งงานให้ subagent | `superpowers:subagent-driven-development` | มอบหมาย subagent แบบ micro-plan มี scope/output/verification | ใช้เมื่อแบ่งงานเป็นอิสระได้ |
 | งาน GitHub, repo, issue, PR | `github-workflows` | ใช้ GitHub เป็น source of truth ตรวจ repo/issue/PR/branch | สำหรับ workflow แบบ backup/PR |
 | ข่าว AI / NEW AI | `news-new-ai-digest` | สรุปข่าว AI ภาษาไทยสำหรับครู มี glossary และประโยชน์ต่อ Hermes | ห้ามสรุปอังกฤษล้วน |
 | งานโรงเรียน/แผนสอน/ข้อสอบ | `teacher-thai-workflow` | จัดงานครูเป็นไทย แยกขั้นตอน งานสอน งานนักเรียน เอกสาร | เหมาะกับ non-technical workflow |
@@ -43,14 +43,14 @@
 
 ## Trigger ภาษาไทยที่ควรเข้าใจทันที
 
-- `วางแผน`, `แผน`, `roadmap` -> `writing-plans`
-- `แก้บั๊ก`, `แก้ปัญหา`, `ทำไมพัง`, `ตรวจระบบ` -> `systematic-debugging`
-- `เขียนโค้ด`, `แก้ไฟล์`, `ทำ test` -> `test-driven-development`, `verification-before-completion`
+- `วางแผน`, `แผน`, `roadmap` -> `superpowers:writing-plans`
+- `แก้บั๊ก`, `แก้ปัญหา`, `ทำไมพัง`, `ตรวจระบบ` -> `superpowers:systematic-debugging`
+- `เขียนโค้ด`, `แก้ไฟล์`, `ทำ test` -> `superpowers:test-driven-development`, `superpowers:verification-before-completion`
 - `รันคำสั่ง`, `ssh`, `systemctl`, `journalctl`, `terminal` -> `rtk-shell-guard`
 - `ลดโทเคน`, `ประหยัดโควต้า`, `ภาษาไทยกระชับ` -> `thai-token-optimizer`
 - `สั้นมาก`, `อัดสั้น` -> `caveman`
 - `บีบบริบท`, `checkpoint`, `ทำต่อ`, `บริบทเต็ม` -> `context-compression-checkpoint`, `handoff`
-- `ทำงานเป็นทีม`, `แตกงาน`, `subagent`, `รุมทำงาน`, `teamwork-preview` -> `teamwork-preview-goal`, `subagent-driven-development`
+- `ทำงานเป็นทีม`, `แตกงาน`, `subagent`, `รุมทำงาน`, `teamwork-preview` -> `teamwork-preview-goal`, `superpowers:subagent-driven-development`
 - `รายงานท้ายงาน`, `โควต้า`, `ใช้โมเดลอะไร`, `route` -> `adaptive-task-reporting`, `quota-truth-reporting`, `adaptive-model-routing`
 - `GitHub`, `repo`, `issue`, `PR`, `backup` -> `github-workflows`
 - `ข่าว`, `NEW AI`, `NEW | AI`, `สรุปข่าว AI` -> `news-new-ai-digest`
@@ -65,8 +65,8 @@
 2. Skill ที่ import จาก Codex/Antigravity ใช้เป็น reference ได้ แต่ไม่ควรเป็น primary ถ้ามี Hermes native/protected skill แล้ว
 3. `headroom-context-compression` เป็นเครื่องมือ/engine ที่ดี แต่ routing หลักควรเรียกผ่าน `context-compression-checkpoint`
 4. `caveman` ใช้เฉพาะโหมดสั้นมาก ไม่แทน `thai-token-optimizer`
-5. `subagent-development` เป็นชื่อ wrapper; routing หลักควรไป `subagent-driven-development`
-6. ถ้าไม่แน่ใจ ให้เลือก `using-superpowers` เพื่อบังคับคิดว่าจะใช้ skill อะไรก่อนทำงาน
+5. `subagent-development` เป็นชื่อเก่าที่เลิกใช้; routing หลักควรไป `superpowers:subagent-driven-development`
+6. ถ้าไม่แน่ใจ ให้เลือก `superpowers:using-superpowers` เพื่อบังคับคิดว่าจะใช้ skill อะไรก่อนทำงาน
 
 ## รูปแบบคำตอบเมื่อผู้ใช้ถามว่าใช้ทักษะอะไร
 

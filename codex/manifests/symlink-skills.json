@@ -102,12 +102,6 @@
     "copied_as_real_files": true
   },
   {
-    "name": "brainstorming",
-    "target": "/Users/nattawit/.codex/superpowers/skills/brainstorming",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/brainstorming",
-    "copied_as_real_files": true
-  },
-  {
     "name": "chrome-devtools",
     "target": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools",
     "resolved": "/Users/nattawit/.codex/vendor/google-skills/chrome-devtools-mcp/skills/chrome-devtools",
@@ -144,27 +138,9 @@
     "copied_as_real_files": true
   },
   {
-    "name": "dispatching-parallel-agents",
-    "target": "/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/dispatching-parallel-agents",
-    "copied_as_real_files": true
-  },
-  {
     "name": "edge-to-edge",
     "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge",
     "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/system/edge-to-edge",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "executing-plans",
-    "target": "/Users/nattawit/.codex/superpowers/skills/executing-plans",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/executing-plans",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "finishing-a-development-branch",
-    "target": "/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/finishing-a-development-branch",
     "copied_as_real_files": true
   },
   {
@@ -300,69 +276,9 @@
     "copied_as_real_files": true
   },
   {
-    "name": "receiving-code-review",
-    "target": "/Users/nattawit/.codex/superpowers/skills/receiving-code-review",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/receiving-code-review",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "requesting-code-review",
-    "target": "/Users/nattawit/.codex/superpowers/skills/requesting-code-review",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/requesting-code-review",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "subagent-driven-development",
-    "target": "/Users/nattawit/.codex/superpowers/skills/subagent-driven-development",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/subagent-driven-development",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "systematic-debugging",
-    "target": "/Users/nattawit/.codex/superpowers/skills/systematic-debugging",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/systematic-debugging",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "test-driven-development",
-    "target": "/Users/nattawit/.codex/superpowers/skills/test-driven-development",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/test-driven-development",
-    "copied_as_real_files": true
-  },
-  {
     "name": "testing-setup",
     "target": "/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup",
     "resolved": "/Users/nattawit/.codex/vendor/google-skills/android-skills/testing/testing-setup",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "using-git-worktrees",
-    "target": "/Users/nattawit/.codex/superpowers/skills/using-git-worktrees",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/using-git-worktrees",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "using-superpowers",
-    "target": "/Users/nattawit/.codex/superpowers/skills/using-superpowers",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/using-superpowers",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "verification-before-completion",
-    "target": "/Users/nattawit/.codex/superpowers/skills/verification-before-completion",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/verification-before-completion",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "writing-plans",
-    "target": "/Users/nattawit/.codex/superpowers/skills/writing-plans",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/writing-plans",
-    "copied_as_real_files": true
-  },
-  {
-    "name": "writing-skills",
-    "target": "/Users/nattawit/.codex/superpowers/skills/writing-skills",
-    "resolved": "/Users/nattawit/.codex/superpowers/skills/writing-skills",
     "copied_as_real_files": true
   }
 ]

@@ -3,12 +3,12 @@
   "purpose": "Thai skill selection guide for Codex and Hermes manual/automatic skill routing",
   "default_policy": "auto_select_minimal_canonical_skills",
   "canonical_priority": [
-    "using-superpowers",
-    "writing-plans",
-    "systematic-debugging",
-    "test-driven-development",
-    "executing-plans",
-    "verification-before-completion",
+    "superpowers:using-superpowers",
+    "superpowers:writing-plans",
+    "superpowers:systematic-debugging",
+    "superpowers:test-driven-development",
+    "superpowers:executing-plans",
+    "superpowers:verification-before-completion",
     "rtk-shell-guard",
     "thai-token-optimizer",
     "context-compression-checkpoint",
@@ -16,7 +16,7 @@
     "adaptive-task-reporting",
     "quota-truth-reporting",
     "teamwork-preview-goal",
-    "subagent-driven-development",
+    "superpowers:subagent-driven-development",
     "github-workflows",
     "teacher-thai-workflow",
     "news-new-ai-digest",
@@ -28,17 +28,17 @@
   ],
   "thai_trigger_map": {
     "วางแผน": [
-      "writing-plans"
+      "superpowers:writing-plans"
     ],
     "แก้บั๊ก": [
-      "systematic-debugging"
+      "superpowers:systematic-debugging"
     ],
     "แก้ปัญหา": [
-      "systematic-debugging"
+      "superpowers:systematic-debugging"
     ],
     "เขียนโค้ด": [
-      "test-driven-development",
-      "verification-before-completion"
+      "superpowers:test-driven-development",
+      "superpowers:verification-before-completion"
     ],
     "รันคำสั่ง": [
       "rtk-shell-guard"
@@ -60,10 +60,10 @@
     ],
     "ทำงานเป็นทีม": [
       "teamwork-preview-goal",
-      "subagent-driven-development"
+      "superpowers:subagent-driven-development"
     ],
     "subagent": [
-      "subagent-driven-development"
+      "superpowers:subagent-driven-development"
     ],
     "รายงานท้ายงาน": [
       "adaptive-task-reporting",

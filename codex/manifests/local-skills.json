@@ -197,7 +197,7 @@
   {
     "folder": "superpowers-bootstrap",
     "name": "superpowers-bootstrap",
-    "description": "Use when an Antigravity-style Superpowers bootstrap is requested in Codex - maps the bootstrap behavior to Codex's using-superpowers skill"
+    "description": "Use when an Antigravity-style Superpowers bootstrap is requested in Codex - maps the bootstrap behavior to Codex's superpowers:using-superpowers skill"
   },
   {
     "folder": "tdd",
@@ -212,7 +212,7 @@
   {
     "folder": "teamwork-preview",
     "name": "teamwork-preview",
-    "description": "Use when an Antigravity-style teamwork-preview workflow is requested in Codex - maps to the Codex-native subagent-driven-development workflow."
+    "description": "Use when an Antigravity-style teamwork-preview workflow is requested in Codex - maps to the Codex-native superpowers:subagent-driven-development workflow."
   },
   {
     "folder": "teamwork-preview-goal",
@@ -257,7 +257,7 @@
   {
     "folder": "writing-workflows",
     "name": "writing-workflows",
-    "description": "Use when an Antigravity-style workflow or skill authoring task is requested in Codex - maps to Superpowers writing-skills"
+    "description": "Use when an Antigravity-style workflow or skill authoring task is requested in Codex - maps to Superpowers superpowers:writing-skills"
   },
   {
     "folder": "zoom-out",

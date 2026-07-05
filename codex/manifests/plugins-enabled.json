@@ -52,15 +52,11 @@
     "enabled": true
   },
   {
-    "plugin": "cloudflare@openai-curated",
-    "enabled": true
-  },
-  {
-    "plugin": "computer-use@openai-bundled",
-    "enabled": true
-  },
-  {
     "plugin": "pdf@openai-primary-runtime",
+    "enabled": true
+  },
+  {
+    "plugin": "template-creator@openai-primary-runtime",
     "enabled": true
   },
   {
@@ -72,7 +68,7 @@
     "enabled": true
   },
   {
-    "plugin": "template-creator@openai-primary-runtime",
+    "plugin": "computer-use@openai-bundled",
     "enabled": true
   }
 ]

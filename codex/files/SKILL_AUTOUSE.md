@@ -15,7 +15,7 @@ skill instructions.
 
 1. If the user names a skill, use that skill.
 2. If the task matches a skill description, use that skill.
-3. For broad coding work, first consider `using-superpowers`.
+3. For broad coding work, first consider `superpowers:using-superpowers`.
 4. For unclear feature work, planning, diagnosis, testing, code review, or handoff,
    prefer process skills before domain skills.
 5. For domain-specific work, use the closest specialist skill, such as Google
@@ -24,11 +24,13 @@ skill instructions.
 
 ## Common Triggers
 
-- New feature, design, or implementation plan: `brainstorming`, `grill-with-docs`,
-  `to-prd`, `writing-plans`
+- New feature, design, or implementation plan: `superpowers:brainstorming`,
+  `grill-with-docs`, `to-prd`, `superpowers:writing-plans`
 - Bug, failing test, regression, or unclear behavior: `diagnose`,
-  `systematic-debugging`, `verification-before-completion`
-- Tests or test strategy: `tdd`, `test-driven-development`, `testing-setup`
+  `superpowers:systematic-debugging`,
+  `superpowers:verification-before-completion`
+- Tests or test strategy: `tdd`, `superpowers:test-driven-development`,
+  `testing-setup`
 - Frontend UI, polish, accessibility, or visual review: `impeccable`,
   `modern-web-guidance`, `a11y-debugging`
 - Browser debugging, LCP, memory, or DevTools work: `chrome-devtools`,
@@ -40,31 +42,33 @@ skill instructions.
 - Code architecture, refactor planning, or system understanding:
   `improve-codebase-architecture`, `zoom-out`
 - Antigravity-style team/subagent orchestration:
-  `teamwork-preview`, `subagent-driven-development`
+  `teamwork-preview`, `superpowers:subagent-driven-development`
 - New repository, unfamiliar codebase, repeated context gathering, project
   onboarding, `AGENTS.md`, AI docs, repo context map, or handoff setup:
   `context-bootstrap`, `zoom-out`, `handoff`
 - Issue triage, PRDs, issue creation, or handoff docs: `triage`, `to-issues`,
   `to-prd`, `handoff`
-- Skill creation or workflow conversion: `writing-skills`, `write-a-skill`,
-  `writing-workflows`
+- Skill creation or workflow conversion: `superpowers:writing-skills`,
+  `write-a-skill`, `writing-workflows`
 
 ## Thai Triggers
 
 Use these Thai phrases as first-class routing signals. Users should not need to
 remember skill names.
 
-- `วางแผน`, `แผน`, `roadmap`: `writing-plans`
-- `แก้บั๊ก`, `แก้ปัญหา`, `ทำไมพัง`, `ตรวจระบบ`: `systematic-debugging`
-- `เขียนโค้ด`, `แก้ไฟล์`, `ทำ test`: `test-driven-development`,
-  `verification-before-completion`
+- `วางแผน`, `แผน`, `roadmap`: `superpowers:writing-plans`
+- `แก้บั๊ก`, `แก้ปัญหา`, `ทำไมพัง`, `ตรวจระบบ`:
+  `superpowers:systematic-debugging`
+- `เขียนโค้ด`, `แก้ไฟล์`, `ทำ test`:
+  `superpowers:test-driven-development`,
+  `superpowers:verification-before-completion`
 - `รันคำสั่ง`, `ssh`, `systemctl`, `journalctl`, `terminal`: `rtk-shell-guard`
 - `ลดโทเคน`, `ประหยัดโควต้า`, `ภาษาไทยกระชับ`: `thai-token-optimizer`
 - `สั้นมาก`, `อัดสั้น`: `caveman`
 - `บีบบริบท`, `checkpoint`, `ทำต่อ`, `บริบทเต็ม`:
   `context-compression-checkpoint`, `handoff`
 - `ทำงานเป็นทีม`, `แตกงาน`, `subagent`, `รุมทำงาน`, `teamwork-preview`:
-  `teamwork-preview-goal`, `subagent-driven-development`
+  `teamwork-preview-goal`, `superpowers:subagent-driven-development`
 - `รายงานท้ายงาน`, `โควต้า`, `ใช้โมเดลอะไร`, `route`:
   `adaptive-task-reporting`, `quota-truth-reporting`, `adaptive-model-routing`
 - `GitHub`, `repo`, `issue`, `PR`, `backup`: `github-workflows`
@@ -84,8 +88,8 @@ Some Antigravity-style skill names are installed as Codex wrappers:
 
 - `teamwork-preview` is the canonical Codex wrapper for the original
   Antigravity team workflow
-- `superpowers-bootstrap` maps to `using-superpowers`
-- `writing-workflows` maps to `writing-skills`
+- `superpowers-bootstrap` maps to `superpowers:using-superpowers`
+- `writing-workflows` maps to `superpowers:writing-skills`
 - `headroom-context-compression` should normally be used through
   `context-compression-checkpoint` unless the user explicitly asks for Headroom
   internals.

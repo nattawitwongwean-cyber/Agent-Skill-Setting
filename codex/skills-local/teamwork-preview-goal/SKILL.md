@@ -18,4 +18,4 @@ Before large work, split it into small cells with clear objective, scope, owner,
 - verification
 - stop conditions
 
-Use `subagent-driven-development` when a cell can be delegated independently.
+Use `superpowers:subagent-driven-development` when a cell can be delegated independently.

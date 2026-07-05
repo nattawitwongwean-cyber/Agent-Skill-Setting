@@ -10,13 +10,6 @@ This is an inventory only; secrets, sessions, logs, and runtime state are intent
 - Local path at snapshot time: `/Users/nattawit/.codex/resources/gpt-image-2-prompts`
 - Commit at snapshot time: `b7add2c`
 
-## superpowers
-
-- URL: https://github.com/obra/superpowers.git
-- Source: discovered-git-remote
-- Local path at snapshot time: `/Users/nattawit/.codex/superpowers`
-- Commit at snapshot time: `6fd4507`
-
 ## android-skills
 
 - URL: https://github.com/android/skills.git
@@ -51,6 +44,13 @@ This is an inventory only; secrets, sessions, logs, and runtime state are intent
 - Source: discovered-git-remote
 - Local path at snapshot time: `/Users/nattawit/.codex/vendor_imports/skills`
 - Commit at snapshot time: `49f948f`
+
+## superpowers
+
+- URL: https://github.com/obra/superpowers.git
+- Source: manual-install-record
+- Install hint: `Install or enable superpowers@openai-curated in Codex; clone only if you need source inspection.`
+- Notes: Previously installed as a local clone under ~/.codex/superpowers; now kept as the Codex plugin to avoid duplicate skill names.
 
 ## impeccable
 

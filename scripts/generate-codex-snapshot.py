@@ -45,6 +45,12 @@ SANITIZE_REPLACEMENTS = {
 
 MANUAL_SOURCE_REPOSITORIES = [
     {
+        "name": "superpowers",
+        "url": "https://github.com/obra/superpowers.git",
+        "install_hint": "Install or enable superpowers@openai-curated in Codex; clone only if you need source inspection.",
+        "notes": "Previously installed as a local clone under ~/.codex/superpowers; now kept as the Codex plugin to avoid duplicate skill names.",
+    },
+    {
         "name": "impeccable",
         "url": "https://github.com/pbakaus/impeccable",
         "install_hint": "npx skills add pbakaus/impeccable",

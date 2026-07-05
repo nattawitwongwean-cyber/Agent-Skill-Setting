@@ -7,13 +7,6 @@
     "source": "discovered-git-remote"
   },
   {
-    "name": "superpowers",
-    "url": "https://github.com/obra/superpowers.git",
-    "local_path": "/Users/nattawit/.codex/superpowers",
-    "commit": "6fd4507",
-    "source": "discovered-git-remote"
-  },
-  {
     "name": "android-skills",
     "url": "https://github.com/android/skills.git",
     "local_path": "/Users/nattawit/.codex/vendor/google-skills/android-skills",
@@ -47,6 +40,13 @@
     "local_path": "/Users/nattawit/.codex/vendor_imports/skills",
     "commit": "49f948f",
     "source": "discovered-git-remote"
+  },
+  {
+    "name": "superpowers",
+    "url": "https://github.com/obra/superpowers.git",
+    "install_hint": "Install or enable superpowers@openai-curated in Codex; clone only if you need source inspection.",
+    "notes": "Previously installed as a local clone under ~/.codex/superpowers; now kept as the Codex plugin to avoid duplicate skill names.",
+    "source": "manual-install-record"
   },
   {
     "name": "impeccable",

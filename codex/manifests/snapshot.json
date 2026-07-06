@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-05T18:18:55.180754+00:00",
+  "generated_at": "2026-07-06T01:39:55.871000+00:00",
   "source_codex_home": "/Users/nattawit/.codex",
   "counts": {
-    "local_skill_dirs": 53,
+    "local_skill_dirs": 66,
     "symlink_skills": 47,
     "symlink_skills_copied_as_real_files": 47,
     "missing_skill_md_dirs": 0,
     "enabled_plugins": 18,
-    "source_repositories": 12
+    "source_repositories": 13
   },
   "excluded_sensitive_files": [
     "auth.json",

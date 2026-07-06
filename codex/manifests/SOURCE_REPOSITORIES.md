@@ -10,6 +10,13 @@ This is an inventory only; secrets, sessions, logs, and runtime state are intent
 - Local path at snapshot time: `/Users/nattawit/.codex/resources/gpt-image-2-prompts`
 - Commit at snapshot time: `b7add2c`
 
+## awesome-codex-skills
+
+- URL: https://github.com/ComposioHQ/awesome-codex-skills.git
+- Source: discovered-git-remote
+- Local path at snapshot time: `/Users/nattawit/.codex/vendor/community/awesome-codex-skills`
+- Commit at snapshot time: `9c9da64`
+
 ## android-skills
 
 - URL: https://github.com/android/skills.git

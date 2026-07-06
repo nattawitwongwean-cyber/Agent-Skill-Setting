@@ -10,6 +10,11 @@
     "description": ">"
   },
   {
+    "folder": "agent-deep-links",
+    "name": "agent-deep-links",
+    "description": "Build, validate, and troubleshoot deep links for Codex, Cursor, VS Code, Visual Studio, and similar tools. Use when users ask for clickable links (especially in Slack) that open threads, files, folders, or app settings."
+  },
+  {
     "folder": "antigravity-proxy-matrix",
     "name": "antigravity-proxy-matrix",
     "description": ">"
@@ -30,6 +35,11 @@
     "description": ">"
   },
   {
+    "folder": "changelog-generator",
+    "name": "changelog-generator",
+    "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation."
+  },
+  {
     "folder": "chronicle",
     "name": "chronicle",
     "description": "|"
@@ -38,6 +48,11 @@
     "folder": "cloudflare-deploy",
     "name": "cloudflare-deploy",
     "description": "Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare."
+  },
+  {
+    "folder": "content-research-writer",
+    "name": "content-research-writer",
+    "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership."
   },
   {
     "folder": "context-bootstrap",
@@ -63,6 +78,16 @@
     "folder": "diagnose",
     "name": "diagnose",
     "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" / \"debug this\", reports a bug, says something is broken/throwing/failing, or describes a performance regression."
+  },
+  {
+    "folder": "email-draft-polish",
+    "name": "email-draft-polish",
+    "description": "Draft, rewrite, or condense emails with target tone, length, and audience; use for cold outreach, replies, status updates, or escalations where clarity and brevity matter."
+  },
+  {
+    "folder": "file-organizer",
+    "name": "file-organizer",
+    "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort."
   },
   {
     "folder": "git-guardrails-claude-code",
@@ -115,6 +140,16 @@
     "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable."
   },
   {
+    "folder": "mcp-builder",
+    "name": "mcp-builder",
+    "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK)."
+  },
+  {
+    "folder": "meeting-notes-and-actions",
+    "name": "meeting-notes-and-actions",
+    "description": "Turn meeting transcripts or rough notes into crisp summaries with decisions, risks, and owner-tagged action items; use for Zoom/Meet/Teams transcripts, call notes, or long meeting chats to generate share-ready outputs."
+  },
+  {
     "folder": "migrate-to-shoehorn",
     "name": "migrate-to-shoehorn",
     "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data."
@@ -123,6 +158,11 @@
     "folder": "news-new-ai-digest",
     "name": "news-new-ai-digest",
     "description": ">"
+  },
+  {
+    "folder": "paperjsx",
+    "name": "paperjsx",
+    "description": "Generate PPTX presentations, DOCX documents, XLSX spreadsheets, and PDF reports from structured JSON input using PaperJSX."
   },
   {
     "folder": "pdf",
@@ -195,9 +235,29 @@
     "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing."
   },
   {
+    "folder": "skill-creator",
+    "name": "skill-creator",
+    "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Codex's capabilities with specialized knowledge, workflows, or tool integrations."
+  },
+  {
+    "folder": "skill-installer",
+    "name": "skill-installer",
+    "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos)."
+  },
+  {
+    "folder": "spreadsheet-formula-helper",
+    "name": "spreadsheet-formula-helper",
+    "description": "Write and debug spreadsheet formulas (Excel/Google Sheets), pivot tables, and array formulas; translate between dialects; use when users need working formulas with examples and edge-case checks."
+  },
+  {
     "folder": "superpowers-bootstrap",
     "name": "superpowers-bootstrap",
     "description": "Use when an Antigravity-style Superpowers bootstrap is requested in Codex - maps the bootstrap behavior to Codex's superpowers:using-superpowers skill"
+  },
+  {
+    "folder": "support-ticket-triage",
+    "name": "support-ticket-triage",
+    "description": "Triage customer support tickets/emails/chats into categories, priority, and next action; draft responses and create reproducible steps; use for Zendesk/Intercom/Help Scout exports or pasted threads."
   },
   {
     "folder": "tdd",
@@ -248,6 +308,11 @@
     "folder": "ui-ux-pro-max",
     "name": "ui-ux-pro-max",
     "description": "\"UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.\""
+  },
+  {
+    "folder": "webapp-testing",
+    "name": "webapp-testing",
+    "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs."
   },
   {
     "folder": "write-a-skill",

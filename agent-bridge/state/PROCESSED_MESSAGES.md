@@ -29,3 +29,10 @@ Ledger of processed control-message IDs for idempotency.
   - **Completed At:** 2026-08-18T17:04:50+07:00
   - **Status:** COMPLETED_WAITING_REVIEW
   - **Handoff Message ID:** `AG-0003R`
+
+- **Message ID:** `CG-0003R2`
+  - **Directive:** Final V0.1 baseline corrections and official Antigravity CLI enablement (NAG-V01-R2)
+  - **Accepted At:** 2026-08-18T17:13:30+07:00
+  - **Completed At:** 2026-08-18T17:18:25+07:00
+  - **Status:** COMPLETED_WAITING_REVIEW
+  - **Handoff Message ID:** `AG-0003R2`

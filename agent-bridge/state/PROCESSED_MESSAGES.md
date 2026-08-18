@@ -15,3 +15,10 @@ Ledger of processed control-message IDs for idempotency.
   - **Completed At:** 2026-08-18T09:55:00+07:00
   - **Status:** COMPLETED_WAITING_REVIEW
   - **Handoff Message ID:** `AG-0002`
+
+- **Message ID:** `CG-0003`
+  - **Directive:** Build Nareerat Agent Gateway V0.1 (NAG-V01)
+  - **Accepted At:** 2026-08-18T16:16:00+07:00
+  - **Completed At:** 2026-08-18T16:34:50+07:00
+  - **Status:** COMPLETED_WAITING_REVIEW
+  - **Handoff Message ID:** `AG-0003`

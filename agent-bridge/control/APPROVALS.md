@@ -44,7 +44,35 @@ The existing CG-0003 Level-1 authorizations apply to these review corrections, i
 
 No new Level-2 permission is granted by CG-0003R.
 
-## CG-0003 / CG-0003R Actions Not Approved
+## CG-0003R2 — Final V0.1 Corrections + Official Antigravity CLI Enablement
+
+The human explicitly approved `CG-0003R2` on 2026-08-18 after ChatGPT found two remaining baseline blockers.
+
+### Source correction authorization
+
+The existing CG-0003/CG-0003R source-development authorizations continue for:
+
+- correcting Electron ESM/runtime asset handling,
+- adding a real non-elevated Electron tray/window smoke test,
+- correcting the Antigravity adapter so it invokes only CLI flags actually detected from the installed `agy --help`,
+- adding tests for the detected Antigravity invocation strategy,
+- rerunning all V0.1 tests/typecheck/build/security checks,
+- pushing corrections to `agent/cg-0003-v0.1` and updating draft PR #1.
+
+### Newly Approved Level-2 machine action
+
+The following specific machine change is APPROVED for `CG-0003R2` only:
+
+- Install or enable the **official Google Antigravity CLI (`agy`)** on the Windows machine, using only a current official Google/Antigravity source and a non-elevated/user-scope installation method.
+- Before executing any downloaded installer/package: verify official source provenance, compute SHA-256, inspect Authenticode signer/status when applicable, and run Windows Defender custom scan.
+- If the official `agy` binary already exists in the installed Antigravity user directory, prefer enabling/reusing it instead of downloading a duplicate.
+- A persistent **user-level PATH** update pointing to the verified official `agy` directory is APPROVED if required.
+- Verify the result from a fresh non-elevated shell with `agy --version` and `agy --help`.
+- If first-run authentication is required, the human may complete browser/login interaction directly; credentials/tokens must not be captured, logged or committed.
+
+This approval does **not** authorize Administrator elevation, machine-wide PATH changes, Windows Service/Task Scheduler creation, firewall/registry/service mutation, Secure MCP Tunnel configuration, production workspace access, or permission-bypass flags.
+
+## CG-0003 / CG-0003R / CG-0003R2 Actions Not Approved
 
 - Production LMS/LFS/student workspace access or mutation: NOT APPROVED
 - Registering `Nattawit-LMS` or any production repo for DEVELOP writes: NOT APPROVED
@@ -52,9 +80,11 @@ No new Level-2 permission is granted by CG-0003R.
 - OpenAI tunnel/API credential entry or capture: NOT APPROVED
 - Start with Windows / startup persistence: NOT APPROVED
 - Windows Service creation: NOT APPROVED
+- Scheduled Task creation: NOT APPROVED
 - SYSTEM profile execution: NOT APPROVED
 - UNRESTRICTED profile execution: NOT APPROVED
 - Elevated / Administrator execution: NOT APPROVED
+- Machine-wide PATH modification: NOT APPROVED
 - Registry / Windows service / Scheduled Task / firewall mutation: NOT APPROVED
 - Defender disabling/exclusion changes: NOT APPROVED
 - Force push: NOT APPROVED

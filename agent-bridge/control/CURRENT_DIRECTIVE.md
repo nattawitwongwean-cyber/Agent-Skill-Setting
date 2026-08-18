@@ -1,42 +1,41 @@
 # Current Directive
 
-- **Directive:** CG-0003R
-- **Source:** ChatGPT review (Issue #1 / PR #1)
+- **Directive:** CG-0003R2
+- **Source:** ChatGPT source review + explicit human approval
 - **Target:** Antigravity
-- **Scope:** Correct Nareerat Agent Gateway V0.1 review blockers
+- **Scope:** Final V0.1 baseline corrections and official Antigravity CLI enablement
 - **Date Received:** 2026-08-18
 - **Directive State:** READY
-- **Primary Task:** `agent-bridge/tasks/pending/NAG-V01-R1.md`
+- **Primary Task:** `agent-bridge/tasks/pending/NAG-V01-R2.md`
 - **Design Spec:** `docs/superpowers/specs/2026-08-18-nareerat-agent-gateway-design.md`
 - **Implementation Plan:** `docs/superpowers/plans/2026-08-18-nareerat-agent-gateway-v0.1.md`
-- **Review Record:** `docs/superpowers/reviews/2026-08-18-nareerat-agent-gateway-v0.1-review.md`
+- **Review Reference:** Agent-Skill-Setting Issue `#3`
 
 ## Purpose
 
-Correct the source-level V0.1 mismatches found during ChatGPT review of draft PR #1 before any Gateway V0.1 commit is accepted as the baseline for the Automatic Agent Bridge Watcher.
+Resolve the final two source-level blockers that remain after AG-0003R, then install/enable the official Google Antigravity CLI (`agy`) under the newly approved user-scope authorization so the future Automatic Agent Bridge Watcher can launch Antigravity safely.
 
-This is a corrective continuation of CG-0003. Do not start CG-0004 yet.
+This is still corrective V0.1 work. Do not start CG-0004 yet.
 
 ## Required Start Sequence
 
 1. Safely synchronize `Agent-Skill-Setting`.
 2. Read `agent-bridge/PROTOCOL.md`.
-3. Read `agent-bridge/control/APPROVALS.md`.
+3. Read the latest `agent-bridge/control/APPROVALS.md` including CG-0003R2 authorization.
 4. Read the Gateway Design Spec and V0.1 Implementation Plan.
-5. Read the ChatGPT V0.1 review record fully.
-6. Read `agent-bridge/tasks/pending/NAG-V01-R1.md` fully.
-7. Check `PROCESSED_MESSAGES.md`; accept `CG-0003R` exactly once.
-8. Open existing Gateway repo/branch `agent/cg-0003-v0.1`; do not create a replacement repo or merge PR #1.
-9. Correct only the identified V0.1 blockers and verify them with fresh evidence.
+5. Read Agent-Skill-Setting Issue #3 review findings.
+6. Read `agent-bridge/tasks/pending/NAG-V01-R2.md` fully.
+7. Check `PROCESSED_MESSAGES.md`; accept `CG-0003R2` exactly once.
+8. Open existing Gateway repo/branch `agent/cg-0003-v0.1`; do not replace the repo and do not merge PR #1.
+9. Correct the two blockers and perform the approved official `agy` install/enable sequence.
+10. Produce fresh verification evidence and hand off as AG-0003R2.
 
 ## Blocking Corrections
 
 ```text
-MCP_SDK_REAL_IMPLEMENTATION: REQUIRED
-REAL_ELECTRON_TRAY_RUNTIME: REQUIRED
-ANTIGRAVITY_DELEGATE_FAIL_CLOSED_RUNNER: REQUIRED
-LOCAL_LOOPBACK_AUTH_BOUNDARY: REQUIRED
-REMOVE_TRACKED_TSBUILDINFO: REQUIRED
+ELECTRON_ESM_RUNTIME_AND_REAL_TRAY_SMOKE: REQUIRED
+ANTIGRAVITY_CAPABILITY_DETECTED_INVOCATION: REQUIRED
+OFFICIAL_AGY_INSTALL_OR_ENABLE: APPROVED_AND_REQUIRED_WHEN_NEEDED
 ```
 
 ## Active Bounds
@@ -51,42 +50,54 @@ DO_NOT_CONFIGURE_SECURE_MCP_TUNNEL: YES
 DO_NOT_CREATE_OPENAI_TUNNEL_OR_KEYS: YES
 DO_NOT_ENABLE_START_WITH_WINDOWS: YES
 DO_NOT_CREATE_WINDOWS_SERVICE: YES
+DO_NOT_CREATE_SCHEDULED_TASK: YES
 DO_NOT_USE_SYSTEM_PROFILE: YES
 DO_NOT_USE_UNRESTRICTED_PROFILE: YES
 DO_NOT_RUN_AS_ADMINISTRATOR: YES
+DO_NOT_MODIFY_MACHINE_WIDE_PATH: YES
+USER_SCOPE_PATH_FOR_OFFICIAL_AGY: APPROVED
+OFFICIAL_GOOGLE_AGY_USER_SCOPE_INSTALL: APPROVED
 DO_NOT_MODIFY_REGISTRY_SERVICE_FIREWALL: YES
 DO_NOT_DISABLE_DEFENDER: YES
 DO_NOT_FORCE_PUSH: YES
 DO_NOT_MERGE_DRAFT_PR: YES
+DO_NOT_USE_PERMISSION_BYPASS_FLAGS: YES
 DO_NOT_EXPOSE_SECRETS: YES
 DO_NOT_START_CG_0004: YES
 ```
 
-## Authorized Work
+## Installation Safety Rules
 
-Use the existing CG-0003 Level-1 authorizations as clarified in `APPROVALS.md`. Project-local dependencies necessary to satisfy the already approved V0.1 plan are authorized. Work only on the existing Gateway branch and disposable fixture workspaces.
-
-## Stop / Escalation Rules
-
-- If any correction requires Administrator/elevation, credentials, SYSTEM/UNRESTRICTED, machine-wide Antigravity configuration, registry/service/firewall mutation, production workspace access, Secure MCP Tunnel, startup persistence, or security weakening: stop that action and request approval.
-- Do not use Antigravity permission-bypass flags.
-- Do not claim success from the previous AG-0003 report; rerun fresh verification after source corrections.
-- If safe non-interactive Antigravity CLI support is not available, implement/report `UNAVAILABLE` rather than fake delegation success.
-- Do not merge PR #1.
+- Prefer an already-installed official Antigravity `agy` binary if it exists but is missing from PATH.
+- If download/install is necessary, use only a current official Google/Antigravity source documented by Google.
+- Before executing a downloaded installer/package, record source provenance, SHA-256, Authenticode status/signer when applicable, and Windows Defender custom-scan result.
+- Installation must be non-elevated/user-scope. If Admin elevation or machine-wide PATH is required, stop and request approval instead.
+- User-level PATH for the verified official `agy` directory is explicitly approved.
+- If authentication/login is required, ask for human presence and never capture credentials/tokens.
 
 ## Required End State
 
 After corrections and fresh verification:
 
 ```text
-STATUS: NEEDS_CHATGPT_REVIEW | BLOCKED
-REPLY-TO: CG-0003R
-MSG-ID: AG-0003R
-TASK-ID: NAG-V01-R1
+STATUS: NEEDS_CHATGPT_REVIEW | NEEDS_HUMAN_PRESENCE | BLOCKED
+REPLY-TO: CG-0003R2
+MSG-ID: AG-0003R2
+TASK-ID: NAG-V01-R2
 PR: #1
+LATEST_SOURCE_COMMIT: <sha>
+TESTS: <exact result>
+TYPECHECK: PASS|FAIL|NOT_RUN
+BUILD: PASS|FAIL|NOT_RUN
+ELECTRON_ESM_PATHS: PASS|FAIL|NOT_RUN
+ELECTRON_RENDERER_ASSETS: PASS|FAIL|NOT_RUN
+ELECTRON_REAL_TRAY_SMOKE: PASS|FAIL|NOT_RUN
+AGY_OFFICIAL_SOURCE_VERIFIED: PASS|FAIL|NOT_NEEDED
+AGY_INSTALL_OR_ENABLE: PASS|FAIL|NEEDS_HUMAN_PRESENCE|NOT_RUN
+AGY_VERSION: <version|UNAVAILABLE>
+AGY_NONINTERACTIVE_MODE: <mode|UNAVAILABLE>
+ANTIGRAVITY_ADAPTER_STRATEGY_TEST: PASS|FAIL|NOT_RUN
 MCP_SDK_COMPATIBILITY: PASS|FAIL|NOT_RUN
-ELECTRON_TRAY_SMOKE: PASS|FAIL|NOT_RUN
-ANTIGRAVITY_CAPABILITY: AVAILABLE|UNAVAILABLE|NOT_RUN
 LOCAL_API_AUTH: PASS|FAIL|NOT_RUN
 TSBUILDINFO_TRACKED: YES|NO
 PRODUCTION_WORKSPACE_TOUCHED: NO
@@ -94,4 +105,4 @@ SECURE_MCP_TUNNEL_CONFIGURED: NO
 NEXT_ACTION: WAIT
 ```
 
-Push fixes to `agent/cg-0003-v0.1`, update the draft PR/report, hand off, and wait for ChatGPT review. Do not start CG-0004.
+Push fixes to `agent/cg-0003-v0.1`, update draft PR #1/report, and wait for ChatGPT review. Do not start CG-0004.

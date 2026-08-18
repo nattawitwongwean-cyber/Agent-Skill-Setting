@@ -1,0 +1,22 @@
+# LNWJUD-005 Installer Security Inspection Summary
+
+Filename: NOT_OBTAINED
+Size: 0 bytes
+SHA-256: N/A (No file downloaded due to missing authoritative release asset)
+Provenance State: PARTIALLY_VERIFIED
+Release/Tag: NOT_PUBLISHED (engasnm111/lnwjud repository does not resolve)
+Authenticode Status: N/A
+Signer: N/A
+Signer Thumbprint: N/A
+Published Checksum Availability: NOT_AVAILABLE
+Checksum Match Status: N/A
+Windows Defender Result: N/A (No installer present to scan)
+
+Security Observations:
+1. Claimed release asset lnwjud-Setup-3.0.0.exe from https://github.com/engasnm111/lnwjud/releases/latest does not exist on GitHub.
+2. In accordance with Agent Bridge security policy, unverified third-party mirrors or unofficial downloads were strictly avoided.
+3. No binary was downloaded, written to disk, or launched.
+
+INSTALLER_EXECUTED: NO
+INSTALLATION_PERFORMED: NO
+DO_NOT_EXECUTE_LNWJUD_INSTALLER: YES

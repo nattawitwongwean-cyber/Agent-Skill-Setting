@@ -1,6 +1,6 @@
 # lnwjud Distribution Provenance Report
 
-- **Investigation Date:** 2026-08-18T09:40:00+07:00
+- **Investigation Date:** 2026-08-18 (Updated via Directive `CG-0002` / Task `LNWJUD-004B`)
 - **Auditor:** Antigravity (Local Windows Agent)
 - **Provenance State:** `PARTIALLY_VERIFIED`
 
@@ -8,51 +8,66 @@
 
 ## 1. Summary Assessment
 
-Authoritative documentation exists in a public repository (`engasnm111/lnwjud-readme`), authored by `engasnm111`. However, the claimed distribution repository (`https://github.com/engasnm111/lnwjud`), release tags, installer binaries (`lnwjud-Setup-3.0.0.exe`), and published cryptographic checksums are currently **inaccessible or unpublished** on GitHub.
+Deep follow-up investigation confirmed that author `engasnm111` (Adisorn) created the public documentation repository `https://github.com/engasnm111/lnwjud-readme`. However, exhaustive enumeration across GitHub (repos, gists, forks, code search, commit search), WinGet, npm, and public metadata confirms that the distribution repository (`https://github.com/engasnm111/lnwjud`), release tags, installer binaries (`lnwjud-Setup-3.0.0.exe`), and cryptographic checksums remain **unreleased / not publicly accessible**.
 
-In accordance with Agent Bridge security rules, no unverified binary was downloaded from unofficial or third-party mirrors.
+In strict accordance with security bounds, no unofficial mirrors or unverified third-party binaries were downloaded or executed.
 
 ---
 
-## 2. Investigation Details
+## 2. Deep Investigation Evidence Chain
 
-### Authoritative Documentation Source
-- **Repository Owner:** `engasnm111`
-- **Repository Name:** `lnwjud-readme`
-- **Repository Visibility:** Public
-- **URL:** `https://github.com/engasnm111/lnwjud-readme`
-- **Last Updated:** 2026-08-17T17:55:40Z
-- **Repository Contents:**
-  - `README.md` (50,591 bytes) — Detailed architecture, security bounds, and setup guide.
-  - `Screenshot/` — UI captures of Lnwjud desktop and live log hub.
-  - `logo-256x256.png` (68,801 bytes) — Brand asset.
-- **Releases on `engasnm111/lnwjud-readme`:** None (`[]`).
+### A. Author Account & Repository Inventory (`engasnm111`)
+- **GitHub User:** `engasnm111` (User ID: 58149374)
+- **Public Repositories:**
+  1. `engasnm111/lnwjud-readme` (Public, created 2026-08-17T05:50:35Z) — Documentation, logo, screenshots.
+  2. `engasnm111/lnwdeck` (Public, created 2026-08-15) — AI quota/token tracker for Windows.
+  3. `engasnm111/resume` (Public, created 2026-07-15) — Personal CV.
+- **Gists:** None (`[]`).
+- **Target Repo `engasnm111/lnwjud`:** Re-tested; GitHub API returned `GraphQL: Could not resolve to a Repository with the name 'engasnm111/lnwjud'`.
 
-### Target Source & Binary Repository Check
-- **Claimed Source URL:** `https://github.com/engasnm111/lnwjud.git`
-- **Claimed Release URL:** `https://github.com/engasnm111/lnwjud/releases/latest`
-- **Claimed Asset Filename:** `lnwjud-Setup-3.0.0.exe`
-- **GitHub API Verification Result:**
-  ```text
-  GraphQL: Could not resolve to a Repository with the name 'engasnm111/lnwjud'.
-  ```
-- **Finding:** The repository `engasnm111/lnwjud` does not resolve publicly (it may be private, uncreated, or restricted).
+### B. Documentation Repository Git History & Commits
+- **Commits in `engasnm111/lnwjud-readme`:**
+  - `9e9e52a` (2026-08-17T05:51:17Z, ABCz): `Readme 555` — Initial full README text.
+  - `00ce9ee` (2026-08-17T05:51:53Z, ABCz): `Logooo` — Logo addition.
+  - `8e96215` (2026-08-17T05:52:15Z, ABCz): `Update README.md` — Logo path update.
+  - `e796417` (2026-08-17T06:08:23Z, Adisorn): `Add(): Screennnnnnnnnnzzzz` — Added screenshots.
+  - `ca49d09` (2026-08-17T06:12:40Z, Adisorn): `Update(): Rename` — Renamed screenshot files.
+- **Observations:** No binary releases, commit patches containing source packages, or alternate download mirrors exist in the repository history.
 
-### Cryptographic & Signature Information
-- **Published SHA-256 Checksum:** NOT_AVAILABLE (no release page or checksum file published).
-- **Authenticode Signer Identity:** NOT_AVAILABLE (no binary asset available).
-- **License Claim:** MIT License (stated in README, but formal `LICENSE` file is inside unresolved source repo).
+### C. Forks Analysis
+- **Forks:**
+  - `pithiwat/lnwjud-readme` (Created 2026-08-17T10:16:20Z) — No releases.
+  - `manorann/lnwjud-readme` (Created 2026-08-17T08:03:11Z) — No releases.
+
+### D. Global Code & Metadata Search
+- Searched GitHub code globally for distinctive lnwjud identifiers:
+  - `lnwjud-mcp-stdio.cmd` -> Matches only `engasnm111/lnwjud-readme`
+  - `start-lnwjud-tunnel.ps1` -> Matches only `engasnm111/lnwjud-readme`
+  - `LNWJUD_DATA_PATH` -> Matches only `engasnm111/lnwjud-readme`
+  - `LNWJUD_UNRESTRICTED` -> Matches only `engasnm111/lnwjud-readme`
+- Searched package registries:
+  - WinGet: No package matching `lnwjud`.
+  - npm: No package matching `lnwjud`.
+
+### E. Installer Asset Status
+- **Claimed Asset:** `lnwjud-Setup-3.0.0.exe`
+- **Current Availability:** NOT_AVAILABLE on authoritative GitHub release channel.
+- **Published SHA-256:** NOT_AVAILABLE.
+- **Authenticode Signer:** NOT_AVAILABLE.
+- **Downloaded File:** NONE (0 bytes).
+- **Execution Status:** NOT_EXECUTED.
 
 ---
 
 ## 3. Discrepancy Matrix
 
-| Item | Claim in README | Observed Reality on GitHub | Impact |
+| Entity / Asset | Documentation Claim | Observed Evidence | Verdict |
 |---|---|---|---|
-| Source Code Repo | `github.com/engasnm111/lnwjud` | Repository does not resolve (404/Private) | Cannot build from source |
-| Releases | `github.com/engasnm111/lnwjud/releases` | Release surface does not exist | Cannot download pre-built installer |
-| Checksums | Expected on Release page | Not published | Cannot cryptographically verify ahead of time |
-| Readme Repo | `github.com/engasnm111/lnwjud-readme` | Exists and is public | Architectural specification verified |
+| Author Identity | Adisorn (`engasnm111`) | Confirmed via GitHub account & commit metadata | VERIFIED |
+| Architecture / Spec | Detailed MCP gateway spec | Confirmed in `engasnm111/lnwjud-readme` | VERIFIED |
+| Source Repository | `github.com/engasnm111/lnwjud` | Unresolved / Private / 404 on GitHub | UNRESOLVED |
+| Release Binary | `lnwjud-Setup-3.0.0.exe` | No public release asset published | UNAVAILABLE |
+| Cryptographic Checksum | Expected on Release | None published | UNAVAILABLE |
 
 ---
 
@@ -60,6 +75,6 @@ In accordance with Agent Bridge security rules, no unverified binary was downloa
 
 ```text
 PROVENANCE_STATE: PARTIALLY_VERIFIED
-REASON: Documentation repository confirmed under engasnm111, but binary release and source repository are inaccessible.
-ACTION: Stopped before installer download/inspection. No unverified third-party mirrors used.
+REASON: Publisher identity and architectural specification are confirmed under engasnm111, but the underlying source code repository and compiled binary release remain unreleased/inaccessible on GitHub.
+ACTION: Stopped before installer acquisition/execution. No unverified third-party mirrors used.
 ```

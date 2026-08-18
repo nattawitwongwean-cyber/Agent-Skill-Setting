@@ -136,7 +136,7 @@ V0.1 intentionally defers advanced browser control, Windows UI automation, Offic
 
 ## 6. Native Tool Surface — V0.1
 
-Target: approximately 35 focused tools. Exact count is secondary to covering the complete workflow.
+Target: approximately 40–45 focused tools. Exact count is secondary to covering the complete workflow.
 
 ### Workspace
 
@@ -766,7 +766,7 @@ Target technology stack:
 
 - TypeScript
 - Node.js 24
-- official/appropriate MCP SDK
+- official Model Context Protocol TypeScript SDK unless implementation compatibility testing documents a justified alternative
 - SQLite
 - Electron
 - React

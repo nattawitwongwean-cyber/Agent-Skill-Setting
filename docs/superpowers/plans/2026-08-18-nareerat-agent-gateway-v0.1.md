@@ -6,7 +6,7 @@
 
 **Architecture:** `Agent-Skill-Setting` remains the control plane. A separate private repository, `nattawitwongwean-cyber/Nareerat-Agent-Gateway`, contains product source. The execution core is transport-independent: policy, persistence, task queue, context, tool registry, native tools and delegates are shared by local stdio MCP, loopback HTTP MCP and Agent Bridge. V0.1 uses a dedicated test workspace only and stops before Secure MCP Tunnel configuration or any production LMS/LFS registration.
 
-**Tech Stack:** Windows 10 x64, Node.js 24, pnpm 10.15.0 via Corepack, TypeScript, official MCP TypeScript SDK v2 packages (`@modelcontextprotocol/server`, `@modelcontextprotocol/node`), Zod, SQLite via `better-sqlite3`, Electron, React, Vitest, Playwright, ripgrep, Git, execa, chokidar.
+**Tech Stack:** Windows 10 x64, Node.js 24, pnpm 10.15.0 via Corepack, TypeScript, official MCP TypeScript SDK v2 packages (`@modelcontextprotocol/server`, `@modelcontextprotocol/node`), Zod, built-in Node `node:sqlite`, Electron, React, Vitest, ripgrep, Git, execa, chokidar.
 
 **Spec:** `docs/superpowers/specs/2026-08-18-nareerat-agent-gateway-design.md`
 
@@ -67,16 +67,16 @@ Nareerat-Agent-Gateway/
 
 Responsibilities:
 
-- `packages/core`: shared IDs, states, errors, configuration types.
+- `packages/core`: shared IDs, states, errors, configuration types and runtime composition.
 - `packages/policy`: workspace boundaries, profiles, hard blocks, approval decisions.
-- `packages/persistence`: SQLite schema/repositories and recovery state.
+- `packages/persistence`: SQLite schema/repositories and recovery state using `node:sqlite`.
 - `packages/tools`: Tool Registry plus native workspace/files/search/git/process/build/test packs.
 - `packages/executor`: task queue, workers, locks, step runner, verification rules.
 - `packages/context`: workspace index, ranking, paging, context snapshots, dedup telemetry.
 - `packages/agent-bridge`: machine-readable directive reader and idempotency.
 - `packages/mcp`: Pro-safe read/fetch catalog, local full catalog, stdio and loopback HTTP adapters.
 - `packages/delegation`: Codex and Antigravity adapters.
-- `apps/desktop`: Electron tray/dashboard shell only; business logic remains in packages.
+- `apps/desktop`: Electron tray/dashboard shell only; renderer never directly accesses filesystem, shell or SQLite. Electron main composes the shared Gateway runtime and exposes a narrow preload API.
 
 ---
 
@@ -88,7 +88,7 @@ Responsibilities:
 - Test: `packages/core/src/version.test.ts`
 
 **Interfaces:**
-- Produces workspace scripts `build`, `test`, `typecheck`, `lint` and package import prefix `@nareerat/*`.
+- Produces workspace scripts `build`, `test`, `typecheck` and package import prefix `@nareerat/*`.
 - Produces `GATEWAY_VERSION = "0.1.0"`.
 
 - [ ] **Step 1: Verify the repo does not already exist, then create it privately**
@@ -120,6 +120,7 @@ Root `package.json` must contain at least:
   "version": "0.1.0",
   "type": "module",
   "packageManager": "pnpm@10.15.0",
+  "engines": { "node": ">=24 <25" },
   "scripts": {
     "build": "tsc -b",
     "typecheck": "tsc -b --pretty false",
@@ -142,8 +143,7 @@ Install the baseline toolchain and runtime dependencies:
 
 ```powershell
 corepack pnpm@10.15.0 add -Dw typescript vitest @types/node
-corepack pnpm@10.15.0 add -w zod execa chokidar better-sqlite3
-corepack pnpm@10.15.0 add -Dw @types/better-sqlite3
+corepack pnpm@10.15.0 add -w zod execa chokidar
 ```
 
 - [ ] **Step 3: Write the first failing test**
@@ -309,7 +309,15 @@ Use a temporary SQLite file. Verify a task survives close/reopen and `RUNNING` t
 corepack pnpm@10.15.0 vitest run packages/persistence
 ```
 
-- [ ] **Step 3: Implement schema**
+- [ ] **Step 3: Implement database wrapper with Node built-in SQLite**
+
+Use:
+
+```ts
+import { DatabaseSync } from "node:sqlite";
+```
+
+Open with extensions disabled. Enable foreign keys and WAL using SQL pragmas. V0.1 must not load SQLite extensions.
 
 Create tables named exactly:
 
@@ -327,7 +335,7 @@ workspace_index_state
 processed_directives
 ```
 
-Use WAL mode and foreign keys. Store timestamps as ISO-8601 UTC strings.
+Store timestamps as ISO-8601 UTC strings.
 
 - [ ] **Step 4: Implement task/audit repositories and recovery query**
 
@@ -796,7 +804,7 @@ git push
 - Test: `apps/desktop/src/renderer/App.test.tsx`
 
 **Interfaces:**
-- Desktop runtime starts/stops Gateway Core.
+- Electron main owns/composes the shared Gateway runtime; renderer does not import Node filesystem/process/SQLite modules.
 - Closing the window hides to tray; Quit stops runtime.
 - Renderer receives sanitized state through preload IPC only.
 
@@ -817,7 +825,7 @@ Menu items: Open Dashboard, Gateway Status, Start/Stop Gateway, Quit. `Start wit
 
 - [ ] **Step 4: Implement basic pages using runtime read APIs**
 
-No page is allowed to bypass `PolicyEngine` or call shell directly from renderer.
+No renderer page is allowed to bypass preload/runtime interfaces or call shell/filesystem directly.
 
 - [ ] **Step 5: Verify desktop unit tests and launch smoke**
 
@@ -918,7 +926,7 @@ git diff main...HEAD
 git diff main...HEAD --check
 ```
 
-Search staged/current branch content for obvious key markers without printing values. If a secret is found, remove it from Git history before PR creation and report `SECURITY_BLOCKED`.
+Search branch content for obvious key markers without printing values. If a secret is found, stop, remove it safely before PR creation, and report `SECURITY_BLOCKED`; do not copy the secret into logs or reports.
 
 - [ ] **Step 2: Open a draft PR; do not merge**
 
@@ -964,7 +972,7 @@ Do not merge the PR, register a production workspace, configure Secure MCP Tunne
 - [x] Native read/write/search/Git vertical slice is covered.
 - [x] Workspace canonicalization/path escape tests precede production-like write behavior.
 - [x] SAFE/DEVELOP/SYSTEM/UNRESTRICTED policy model and hard blocks are represented.
-- [x] SQLite persistence, recovery, task states, locks and approvals are covered.
+- [x] SQLite persistence, recovery, task states, locks and approvals are covered without a native SQLite npm add-on.
 - [x] Process timeout/cancel/log paging and secret redaction are covered.
 - [x] Context indexing/ranking/paging/dedup/snapshot staleness are covered.
 - [x] Tool Registry/discovery metadata are covered.
@@ -972,7 +980,7 @@ Do not merge the PR, register a production workspace, configure Secure MCP Tunne
 - [x] Pro mode explicitly filters write/execute MCP tools rather than disguising them.
 - [x] Codex and Antigravity remain optional and fail closed.
 - [x] Delegate success requires native verification.
-- [x] Electron tray/dashboard is a shell around shared runtime packages.
+- [x] Electron renderer is isolated from Node/filesystem/process/SQLite access behind preload/runtime APIs.
 - [x] Full end-to-end verification uses only generated fixture workspaces.
 - [x] Secure MCP Tunnel, production LMS/LFS, Windows startup/service and unrestricted mode are explicitly out of CG-0003 scope.
 - [x] Final work is delivered as a draft PR and is not auto-merged.

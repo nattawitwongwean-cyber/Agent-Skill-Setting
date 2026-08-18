@@ -26,7 +26,25 @@ The following actions are approved for `CG-0003` / `NAG-V01`:
 - Open a draft PR to `main` after verification.
 - Report results through Agent Bridge and Issue #1.
 
-## CG-0003 Actions Not Approved
+## CG-0003R — V0.1 Review Corrections
+
+`CG-0003R` / `NAG-V01-R1` is a corrective continuation of the already approved V0.1 scope, not a new product phase.
+
+The existing CG-0003 Level-1 authorizations apply to these review corrections, including:
+
+- replacing the handwritten MCP layer with the supported MCP TypeScript SDK,
+- installing project-local MCP SDK packages required for that correction,
+- installing project-local Electron/React dependencies already required by the approved V0.1 plan,
+- implementing the approved Electron tray/window/preload behavior,
+- capability-detecting and safely invoking the installed `agy` CLI in disposable fixture workspaces when supported,
+- adding a machine-local runtime authentication boundary for loopback API access without committing secrets,
+- removing generated `*.tsbuildinfo` artifacts from Git tracking,
+- rerunning non-elevated tests, typecheck, build and approved local smoke tests,
+- pushing corrections to `agent/cg-0003-v0.1` and updating draft PR #1.
+
+No new Level-2 permission is granted by CG-0003R.
+
+## CG-0003 / CG-0003R Actions Not Approved
 
 - Production LMS/LFS/student workspace access or mutation: NOT APPROVED
 - Registering `Nattawit-LMS` or any production repo for DEVELOP writes: NOT APPROVED

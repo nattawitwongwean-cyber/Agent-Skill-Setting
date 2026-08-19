@@ -1,8 +1,9 @@
 {
   "protocol": "cross-machine-dev-proof-v1",
-  "status": "awaiting_linux_dev",
+  "status": "completed_by_linux_dev",
   "task": "Linux Dev Gateway must implement linux-dev-proof.json and complete verification",
   "initiator": "mac-owner-gateway",
   "target": "linux-dev-gateway",
-  "timestamp": "2026-08-19T20:52:00+07:00"
+  "timestamp": "2026-08-19T20:52:00+07:00",
+  "completedAt": "2026-08-19T20:52:30+07:00"
 }

@@ -1,0 +1,10 @@
+{
+  "protocol": "cross-machine-dev-proof-v1",
+  "hostname": "hermes-Latitude-E6420",
+  "platform": "linux",
+  "status": "DEV_LINUX_VERIFIED",
+  "kernel": "6.8.0-138-generic",
+  "timestamp": "2026-08-19T20:52:30+07:00",
+  "testedWith": "node test runner",
+  "verifiedBy": "Linux Dev Gateway (@Dev)"
+}

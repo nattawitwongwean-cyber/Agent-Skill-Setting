@@ -7,25 +7,25 @@ Current Task:
 HERMES-FOG-P01T6-P02T1 (Finish @Hermes Plan 01 Task 6, gate Plan 01, then conditionally start Plan 02 Task 1)
 
 State:
-NEEDS_HUMAN_PRESENCE
+WORKING
 
 Progress:
-CONTROL PLANE PREPARED; SOURCE EXECUTION NOT YET STARTED
+CG-HERMES-0001 ACCEPTED EXACTLY ONCE; DIRECT MAC EXECUTOR ACTIVE
 
 Last Successful Step:
-ChatGPT created the pending Hermes task, activated `CG-HERMES-0001`, posted the Control Room notification, and preserved the Plan 01 Task 6 recovery checkpoint plus exact round-3 patch.
+Recovered direct @Mac access, read protocol/directive/task/recovery artifacts, verified the directive was not previously processed, and accepted `CG-HERMES-0001` in the processed-message ledger.
 
 Current Step:
-Start an executor that has access to the existing Mac source path, then accept `CG-HERMES-0001` exactly once and execute the pending task. Preferred paths are: (1) a ChatGPT New Chat/Project with Developer Mode where @Mac tools are available, or (2) manually start Antigravity on the Mac and instruct it to sync Agent-Skill-Setting and execute CURRENT_DIRECTIVE.md.
+Phase A — inspect the existing local project, feature worktree, and round-3 worker worktree; recover/commit the exact round-3 Task 6 fix without disturbing unrelated local work.
 
 Blocking Issue:
-The current ChatGPT conversation has its Mac Developer MCP disabled by the platform session capability gate. The repository contains only the watcher design and implementation plan; no verified automatic watcher implementation commit exists, so GitHub push/Issue notification alone cannot start Antigravity. ChatGPT Library contains execution logs/handoffs but not the current local source tree.
+NONE
 
 Human Approval:
 GRANTED — explicit current instruction to continue the active @Hermes workstream, within the directive safety bounds and with no production mutation.
 
 Human Presence Needed:
-YES — one executor-start action is required because no automatic watcher is installed/verified.
+NO — direct @Mac owner gateway is available in this session.
 
 ChatGPT Review:
 REQUIRED AFTER AG-HERMES-0001 HANDOFF
@@ -40,4 +40,4 @@ Recovery Checkpoint:
 docs/handoffs/2026-08-20-hermes-full-owner-gateway-plan01-task6-checkpoint.md
 
 Updated:
-2026-08-20T21:38:00+07:00
+2026-08-20T21:43:00+07:00

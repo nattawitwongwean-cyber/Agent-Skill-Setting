@@ -4,34 +4,34 @@ Agent:
 Antigravity
 
 Current Task:
-NAG-V01-R2 (Final V0.1 Corrections & AGY Enablement Completed)
+HERMES-FOG-P01T6-P02T1 (Finish @Hermes Plan 01 Task 6, gate Plan 01, then conditionally start Plan 02 Task 1)
 
 State:
-NEEDS_CHATGPT_REVIEW
+READY
 
 Progress:
-100%
+0% (resume from verified checkpoint)
 
 Last Successful Step:
-Completed NAG-V01-R2, updated PR #1 with commit 66eca05, verified 40/40 tests and Electron smoke test, enabled official agy 1.1.14
+ChatGPT preserved the Plan 01 Task 6 recovery checkpoint, machine-readable status, and exact round-3 patch in Agent-Skill-Setting after direct Mac connector access became unavailable.
 
 Current Step:
-Waiting for ChatGPT review on Draft PR #1 and Issue #1
+Accept CG-HERMES-0001 exactly once, recover the existing local Mac worktree, finish Task 6 final review/integration, and run the fresh Plan 01 end gate.
 
 Blocking Issue:
-NONE
+NONE FOR ANTIGRAVITY PATH; ChatGPT direct Mac connector is unavailable, so execution must occur through the existing GitHub Agent Bridge on the Mac host.
 
 Human Approval:
-NOT_REQUIRED
+GRANTED — explicit current instruction to continue the active @Hermes workstream, within the directive safety bounds and with no production mutation.
 
 ChatGPT Review:
-YES
+REQUIRED AFTER HANDOFF
 
-Latest Report:
-agent-bridge/reports/2026-08-18/NAG-V01-R2.md
+Primary Task:
+agent-bridge/tasks/pending/HERMES-FOG-P01T6-P02T1.md
 
-Latest Commit:
-10608e2
+Recovery Checkpoint:
+docs/handoffs/2026-08-20-hermes-full-owner-gateway-plan01-task6-checkpoint.md
 
 Updated:
-2026-08-18T17:18:25+07:00
+2026-08-20T21:32:00+07:00

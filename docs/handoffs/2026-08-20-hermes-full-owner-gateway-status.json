@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-08-20T21:25:00+07:00",
+  "status": "VERIFIED_PARTIAL",
+  "program": "@Hermes Full Owner Gateway",
+  "plan": "docs/superpowers/plans/2026-08-20-hermes-full-owner-gateway-01-linux-core.md",
+  "task": "Plan 01 Task 6",
+  "localProjectPath": "/Users/nattawit/Documents/Codex/2026-08-19/files-pasted-by-the-user-master/work/mac-owner-gateway",
+  "featureBranch": "feature/hermes-full-owner-gateway",
+  "featureHeadLastVerified": "2a152c3",
+  "reviewFixCommitsNotYetIntegrated": [
+    "7b174a7",
+    "492e1f7"
+  ],
+  "round3Worker": "w-20260820210909-9bcab979",
+  "round3Base": "492e1f7",
+  "round3PatchFile": "docs/handoffs/2026-08-20-hermes-plan01-task6-round3.patch",
+  "round3Verification": {
+    "npmCi": "PASS",
+    "build": "PASS",
+    "hermesTests": "33/33 PASS",
+    "linuxJsonRpcAcceptance": "PASS",
+    "npmTestInWorker": "BLOCKED_BY_WORKER_SANDBOX_EPERM_AUDIT_LOG"
+  },
+  "realHermesEvidence": {
+    "nodeVersion": "v22.23.2",
+    "initialize": "PASS",
+    "toolCount": 57,
+    "gatewayIdentity": "Hermes/linux",
+    "hermesGatewayService": "active",
+    "lmsProductionNginxService": "active",
+    "dockerService": "active",
+    "productionHermesMcpUnitsInstalled": false
+  },
+  "productionHermesChanged": false,
+  "plan02Started": false,
+  "blocker": "Mac connector discovery intermittently succeeds but direct invocation returns Resource not found; local-only source cannot be safely integrated or verified through GitHub alone.",
+  "nextActions": [
+    "Recover direct Mac connector access",
+    "Inspect round3 worker status/result and commit if necessary",
+    "Run cumulative final review from 2a152c3 through round3 commit",
+    "Integrate 7b174a7, 492e1f7, and accepted round3 fix into feature branch",
+    "Run complete Plan 01 end gate from feature worktree",
+    "Recheck protected Hermes services read-only",
+    "Only then mark Plan 01 complete and start Plan 02 Task 1"
+  ]
+}

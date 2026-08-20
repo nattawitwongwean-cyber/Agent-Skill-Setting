@@ -10,22 +10,22 @@ State:
 READY
 
 Progress:
-CG-HERMES-APP-0001 ISSUED — BACKEND-ONLY HERMES IS NOT ACCEPTED AS COMPLETE
+CG-HERMES-APP-0001 ACTIVE; REMOTE EXECUTION ADDENDUM ISSUED — BACKEND-ONLY HERMES IS NOT ACCEPTED AS COMPLETE
 
 Last Successful Step:
-Confirmed CG-HERMES-0001 backend/source scope completed at feature head bf489e8, then confirmed from the user's ChatGPT Plugins screen that no Personal app named Hermes exists. Created a new concrete directive whose finish line is UI-visible and live-callable @Hermes.
+Confirmed CG-HERMES-0001 backend/source scope completed at feature head bf489e8, confirmed from the user's ChatGPT Plugins screen that no Personal app named Hermes exists, created the concrete Personal-app directive, and issued remote-execution addendum `CG-HERMES-APP-0001-REMOTE1` because the operator is not physically present at the Hermes host.
 
 Current Step:
-Codex must accept CG-HERMES-APP-0001, verify the Mac/Hermes source, prepare a secure reachable Hermes MCP endpoint, register Personal app `Hermes` in ChatGPT, and run live @Hermes acceptance.
+Codex must execute from the Mac control host using the existing authenticated SSH/remote route to Hermes, prepare/deploy only the authorized user-scope Hermes MCP runtime and secure transport if required, then create Personal app `Hermes` in the Mac ChatGPT session and run live @Hermes acceptance. Do not wait for a local Hermes console.
 
 Blocking Issue:
-NONE KNOWN — EXECUTOR ACK/EXECUTION PENDING
+NONE KNOWN — CODEX EXECUTION/ACK PENDING
 
 Human Approval:
-GRANTED — continue until Hermes is actually available in ChatGPT. Minimum necessary user-scope Hermes MCP service, secure MCP transport, and Personal ChatGPT app registration are authorized for this directive. Root/system-wide/security weakening remains outside authorization.
+GRANTED — continue until Hermes is actually available in ChatGPT. Minimum necessary user-scope Hermes MCP service, secure MCP transport, Personal ChatGPT app registration, and remote execution from Mac to Hermes are authorized. Root/system-wide/security weakening remains outside authorization.
 
 Human Presence Needed:
-NO — unless ChatGPT/login/credential consent presents an exact manual interaction that computer control cannot complete without exposing secrets.
+NO AT HERMES — the operator is not at the Hermes machine and local physical presence must not be treated as a prerequisite. Only an exact new ChatGPT/login/credential consent step that cannot be completed through the existing authenticated Mac session without exposing secrets may require human presence.
 
 ChatGPT Review:
 REQUIRED AFTER CDX-HERMES-APP-0001 HANDOFF
@@ -39,17 +39,23 @@ Hermes visible under Personal → Created by me; @Hermes selectable; live MCP ca
 Protected Existing Services:
 hermes-gateway.service / LMS production nginx / Docker — MUST REMAIN UNCHANGED
 
+Remote Control Host:
+MAC — existing authenticated SSH/remote route to Hermes; no local Hermes GUI/console required
+
 Primary Task:
 agent-bridge/tasks/pending/HERMES-CHATGPT-APP-0001.md
 
 Current Directive:
 agent-bridge/control/CURRENT_DIRECTIVE.md
 
+Remote Execution Addendum:
+Control Room Issue #1 comment 5362751558 (`CG-HERMES-APP-0001-REMOTE1`)
+
 Previous Hermes Task:
 agent-bridge/tasks/completed/HERMES-FOG-P01T6-P02T1.md
 
 Next Action:
-CODEX_ACCEPT_AND_EXECUTE_CG-HERMES-APP-0001
+CODEX_REMOTE_EXECUTE_CG-HERMES-APP-0001_NOW
 
 Updated:
-2026-08-21T05:14:00+07:00
+2026-08-21T05:23:00+07:00

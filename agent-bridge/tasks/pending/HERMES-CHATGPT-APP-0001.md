@@ -3,7 +3,7 @@
 - **Directive:** `CG-HERMES-APP-0001`
 - **Issued By:** ChatGPT from explicit human instruction to continue until Hermes is actually available in ChatGPT
 - **Target:** Codex on the Mac development host
-- **Status:** PENDING
+- **Status:** WORKING
 - **Priority:** CRITICAL
 - **Program:** `@Hermes Full Owner Gateway`
 - **Date Received:** 2026-08-21

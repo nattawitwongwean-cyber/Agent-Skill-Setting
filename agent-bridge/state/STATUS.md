@@ -7,19 +7,19 @@ Current Task:
 HERMES-CHATGPT-APP-0001 (Make @Hermes a real Personal ChatGPT app)
 
 State:
-READY
+WORKING
 
 Progress:
-CG-HERMES-APP-0001 ACTIVE; REMOTE EXECUTION ADDENDUM ISSUED — BACKEND-ONLY HERMES IS NOT ACCEPTED AS COMPLETE
+CG-HERMES-APP-0001 ACCEPTED EXACTLY ONCE; BOOTSTRAP AND DOCS-FIRST EXECUTION IN PROGRESS — BACKEND-ONLY HERMES IS NOT ACCEPTED AS COMPLETE
 
 Last Successful Step:
 Confirmed CG-HERMES-0001 backend/source scope completed at feature head bf489e8, confirmed from the user's ChatGPT Plugins screen that no Personal app named Hermes exists, created the concrete Personal-app directive, and issued remote-execution addendum `CG-HERMES-APP-0001-REMOTE1` because the operator is not physically present at the Hermes host.
 
 Current Step:
-Codex must execute from the Mac control host using the existing authenticated SSH/remote route to Hermes, prepare/deploy only the authorized user-scope Hermes MCP runtime and secure transport if required, then create Personal app `Hermes` in the Mac ChatGPT session and run live @Hermes acceptance. Do not wait for a local Hermes console.
+Verifying the Mac control host/worktree, Hermes host baseline, current OpenAI Apps SDK requirements, and the existing working Mac Personal app transport pattern before the first runtime mutation.
 
 Blocking Issue:
-NONE KNOWN — CODEX EXECUTION/ACK PENDING
+NONE KNOWN — EXECUTION ACTIVE
 
 Human Approval:
 GRANTED — continue until Hermes is actually available in ChatGPT. Minimum necessary user-scope Hermes MCP service, secure MCP transport, Personal ChatGPT app registration, and remote execution from Mac to Hermes are authorized. Root/system-wide/security weakening remains outside authorization.
@@ -55,7 +55,7 @@ Previous Hermes Task:
 agent-bridge/tasks/completed/HERMES-FOG-P01T6-P02T1.md
 
 Next Action:
-CODEX_REMOTE_EXECUTE_CG-HERMES-APP-0001_NOW
+VERIFY_MAC_AND_HERMES_THEN_PREPARE_SECURE_HERMES_MCP
 
 Updated:
-2026-08-21T05:23:00+07:00
+2026-08-21T05:45:37+07:00

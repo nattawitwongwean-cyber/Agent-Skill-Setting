@@ -43,3 +43,8 @@ Ledger of processed control-message IDs for idempotency.
   - **Completed At:** 2026-08-20T22:09:00+07:00
   - **Status:** COMPLETED_WAITING_REVIEW
   - **Handoff Message ID:** `AG-HERMES-0001`
+
+- **Message ID:** `CG-HERMES-APP-0001`
+  - **Directive:** Make @Hermes a real ChatGPT Personal app end-to-end
+  - **Accepted At:** 2026-08-21T05:45:37+07:00
+  - **Status:** WORKING

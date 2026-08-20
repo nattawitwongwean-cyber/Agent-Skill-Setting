@@ -1,0 +1,54 @@
+diff --git a/test/hermes/linux-jsonrpc-acceptance.mjs b/test/hermes/linux-jsonrpc-acceptance.mjs
+--- a/test/hermes/linux-jsonrpc-acceptance.mjs
++++ b/test/hermes/linux-jsonrpc-acceptance.mjs
+@@ -38,7 +38,13 @@ function startGateway(home) {
+-  const hasExited = () => closed || child.exitCode !== null;
++  const hasExited = () => closed || child.exitCode !== null || child.signalCode !== null;
++  const removeChildListeners = () => {
++    child.stdout.off("data", onStdout);
++    child.off("error", onError);
++    child.off("exit", onExit);
++    child.off("close", onClose);
++  };
+   const terminate = (signal) => {
+     if (hasExited()) return;
+     try { child.kill(signal); } catch { /* child may have exited between the state check and kill */ }
+@@ -47,10 +53,7 @@ function startGateway(home) {
+-    child.stdout.off("data", onStdout);
+-    child.off("error", onError);
+-    child.off("exit", onExit);
+-    child.off("close", onClose);
++    removeChildListeners();
+     settleExit();
+   };
+   const failGateway = (error) => {
+@@ -74,7 +77,9 @@ function startGateway(home) {
+-        if (!message || typeof message !== "object") throw new Error("JSON-RPC message is not an object");
++        if (!message || typeof message !== "object" || Array.isArray(message)) {
++          throw new Error("JSON-RPC message is not a non-array object");
++        }
+       } catch (error) {
+         failGateway(new Error(`Hermes gateway emitted malformed JSON: ${error instanceof Error ? error.message : String(error)}`));
+         return;
+@@ -141,12 +146,10 @@ function startGateway(home) {
+-    if (!closed) {
+-      child.stdout.off("data", onStdout);
+-      child.off("error", onError);
+-      child.off("exit", onExit);
+-      child.off("close", onClose);
++    if (!hasExited()) {
++      removeChildListeners();
+       rejectPending(new Error("Hermes gateway shutdown timed out"));
++      throw new Error("Hermes gateway shutdown timed out waiting for child exit after SIGKILL");
+     }
+   };
+   return { request, notify, shutdown };
+@@ -230,6 +233,9 @@ try {
+-  if (gateway) await gateway.shutdown();
+-  fs.rmSync(home, { recursive: true, force: true });
++  try {
++    if (gateway) await gateway.shutdown();
++  } finally {
++    fs.rmSync(home, { recursive: true, force: true });
++  }
+ }

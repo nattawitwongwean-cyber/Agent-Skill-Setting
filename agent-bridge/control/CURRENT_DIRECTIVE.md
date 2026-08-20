@@ -1,67 +1,84 @@
 # Current Directive
 
-- **Directive:** `CG-CODEX-0001`
-- **Source:** Explicit human instruction via ChatGPT
+- **Directive:** `CG-HERMES-APP-0001`
+- **Source:** Explicit human instruction after verifying that no `Hermes` Personal ChatGPT app is visible
 - **Target:** Codex on the Mac development host
-- **Scope:** Establish Codex as the primary executor for routine Mac computer-management and development work, with minimal operator interruption and strict Agent Bridge safety bounds
+- **Scope:** Complete the @Hermes delivery end-to-end: reachable secure Hermes MCP runtime + Personal ChatGPT app registration + live `@Hermes` acceptance
 - **Date Received:** 2026-08-21
 - **Directive State:** READY
-- **Primary Task:** `agent-bridge/tasks/pending/CODEX-MAC-OWNER-0001.md`
+- **Primary Task:** `agent-bridge/tasks/pending/HERMES-CHATGPT-APP-0001.md`
+- **Prior Hermes Source Head:** `bf489e8de3f14301107dab1dcee9eb8d75b893c8`
 
 ## Purpose
 
-Codex is the preferred primary executor for subsequent computer/project work. For routine reversible local actions, Codex should inspect, act, verify, and finish the authorized task without asking for confirmation at every intermediate step.
+The prior `CG-HERMES-0001` successfully completed the Hermes backend/source scope, but the user's actual product-level goal is not complete because ChatGPT still does not show a Personal app named `Hermes`. This directive closes that gap.
 
-This is an executor/operating-model directive, not unlimited permission. It does not authorize bypassing sandbox/security controls, exposing secrets, destructive machine actions, protected production mutation, or privilege-boundary changes without an action-specific approval.
+Completion requires a real Personal ChatGPT app named `Hermes` to appear under **Personal → Created by me**, be selectable as `@Hermes`, and successfully perform a live safe MCP call against the Hermes Linux gateway.
 
-The completed `CG-HERMES-0001` workstream remains closed. This directive does not reopen it and does not authorize Hermes Plan 02 Task 2+ by itself.
+Backend-only evidence is not sufficient.
+
+## Executor
+
+Codex is the primary executor. The earlier `CG-CODEX-0001` role policy remains the standing execution model. If its administrative acknowledgement is still unprocessed, load/record those bounds without delaying this concrete Hermes task.
 
 ## Required Start Sequence
 
-1. Read `agent-bridge/PROTOCOL.md`, this directive, `agent-bridge/state/STATUS.md`, and `agent-bridge/state/PROCESSED_MESSAGES.md`.
-2. Read `agent-bridge/tasks/pending/CODEX-MAC-OWNER-0001.md` fully.
-3. Accept `CG-CODEX-0001` exactly once.
-4. Verify the Mac host and available Codex/native tooling using read-only checks.
-5. Set Codex as primary executor in bridge state.
-6. Post acknowledgement as `CDX-MAC-0001` to Control Room Issue #1.
-7. If no concrete task is active, remain `READY` with `NEXT_ACTION: WAIT_FOR_TASK`; do not invent source/product changes.
+1. Read `agent-bridge/PROTOCOL.md`, `control/APPROVALS.md`, this directive, `STATUS.md`, and `PROCESSED_MESSAGES.md`.
+2. Read `agent-bridge/tasks/pending/HERMES-CHATGPT-APP-0001.md` in full and the prior Hermes final report.
+3. Accept `CG-HERMES-APP-0001` exactly once.
+4. Verify the correct Mac host and existing local Hermes feature worktree/source head read-only before mutation.
+5. Use current official OpenAI Apps SDK / ChatGPT Personal app documentation before registration work.
+6. Execute the task through the UI + live `@Hermes` acceptance gate.
 
-## Active Bounds
+## Human Authorization for This Directive
+
+The operator explicitly instructed ChatGPT to continue after confirming that `Hermes` was missing from the Plugins/Personal UI. Within this directive, the minimum necessary Level-2 work to produce the requested Personal app is authorized:
+
+```text
+NEW_HERMES_MCP_USER_SCOPE_SERVICE=APPROVED_IF_REQUIRED
+SECURE_MCP_TRANSPORT_FOR_HERMES_APP=APPROVED_IF_REQUIRED
+CHATGPT_PERSONAL_APP_REGISTRATION_HERMES=APPROVED
+USE_EXISTING_AUTHENTICATED_CHATGPT_SESSION_WITHOUT_SECRET_EXTRACTION=APPROVED
+```
+
+This does NOT authorize extracting credentials, weakening security controls, root/system-wide changes, or modifying/restarting the existing protected Hermes gateway, LMS production nginx, or Docker services.
+
+## Mandatory Acceptance Gate
+
+```text
+CHATGPT_PERSONAL_APP_NAME=Hermes
+CHATGPT_PERSONAL_APP_VISIBLE=YES
+CHATGPT_AT_HERMES_SELECTABLE=YES
+CHATGPT_AT_HERMES_LIVE_MCP_CALL=PASS
+HERMES_MCP_INITIALIZE=PASS
+HERMES_MCP_TOOLS_LIST=57
+HERMES_GATEWAY_IDENTITY=Hermes/linux
+PROTECTED_EXISTING_SERVICES_CHANGED=NO
+SECRETS_EXPOSED=NO
+```
+
+Do not mark complete before every required UI/live gate above is evidenced.
+
+## Safety Bounds
 
 ```text
 PRIMARY_EXECUTOR=CODEX
-ROUTINE_REVERSIBLE_LOCAL_ACTIONS=AUTO
-MINIMIZE_OPERATOR_QUESTIONS=YES
-VERIFY_AFTER_MUTATION=REQUIRED
-PRESERVE_PREEXISTING_USER_WORK=REQUIRED
-SECRETS_EXPOSED=NO
 UNRESTRICTED_MODE=FORBIDDEN
 SANDBOX_BYPASS=FORBIDDEN
+SECRETS_READ_PRINT_COMMIT=FORBIDDEN
+PUBLIC_UNAUTHENTICATED_REMOTE_CONTROL=FORBIDDEN
 BULK_DESTRUCTIVE_DELETE=FORBIDDEN
-DISK_OR_PARTITION_DESTRUCTIVE_ACTION=FORBIDDEN
 GIT_RESET_HARD_REAL_WORKSPACE=FORBIDDEN
 GIT_CLEAN_FDX_REAL_WORKSPACE=FORBIDDEN
 GIT_FORCE_PUSH=FORBIDDEN
-SYSTEM_ELEVATION=ACTION_SPECIFIC_APPROVAL_REQUIRED
-SYSTEM_SERVICE_FIREWALL_REGISTRY_SECURITY_CHANGE=ACTION_SPECIFIC_APPROVAL_REQUIRED
-PERSISTENT_MACHINE_WIDE_CHANGE=ACTION_SPECIFIC_APPROVAL_REQUIRED
-NEW_UNVERIFIED_BINARY_EXECUTION=FORBIDDEN
-PROTECTED_PRODUCTION_MUTATION=SEPARATE_EXPLICIT_DIRECTIVE_REQUIRED
+SOURCE_MAIN_MERGE=NOT_AUTHORIZED
+HERMES_EXISTING_GATEWAY_RESTART_STOP_RECONFIGURE=FORBIDDEN
+LMS_PRODUCTION_RESTART_STOP_RECONFIGURE=FORBIDDEN
+DOCKER_PRODUCTION_RESTART_STOP_RECONFIGURE=FORBIDDEN
 ```
 
-## Required Acknowledgement
+If an exact root/system-wide/security-weakening action becomes genuinely necessary, stop only at that boundary and report the exact required approval instead of bypassing it.
 
-```text
-[FROM: CODEX]
-[TO: CHATGPT]
-MSG-ID: CDX-MAC-0001
-REPLY-TO: CG-CODEX-0001
-TASK-ID: CODEX-MAC-OWNER-0001
-STATUS: READY | WORKING | BLOCKED | NEEDS_HUMAN_PRESENCE
-PRIMARY_EXECUTOR: CODEX
-MAC_HOST_VERIFIED: YES|NO
-SAFETY_BOUNDS_LOADED: YES|NO
-UNRESTRICTED_MODE: NO
-SECRETS_EXPOSED: NO
-NEXT_ACTION: WAIT_FOR_TASK | <active authorized task>
-```
+## Required End State
+
+On success, post `CDX-HERMES-APP-0001`, archive the task, update state/ledger, set `NEEDS_CHATGPT_REVIEW`, and `NEXT_ACTION: WAIT`.

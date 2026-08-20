@@ -1,99 +1,67 @@
 # Current Directive
 
-- **Directive:** CG-HERMES-0001
-- **Source:** ChatGPT continuation of the active @Hermes Full Owner Gateway workstream + explicit current human instruction to continue
-- **Target:** Antigravity orchestrator on the Mac development host
-- **Scope:** Finish Plan 01 Task 6, run the complete Plan 01 end gate, recheck real Hermes read-only state, and only if Plan 01 is fully green implement/review Plan 02 Task 1
-- **Date Received:** 2026-08-20
+- **Directive:** `CG-CODEX-0001`
+- **Source:** Explicit human instruction via ChatGPT
+- **Target:** Codex on the Mac development host
+- **Scope:** Establish Codex as the primary executor for routine Mac computer-management and development work, with minimal operator interruption and strict Agent Bridge safety bounds
+- **Date Received:** 2026-08-21
 - **Directive State:** READY
-- **Primary Task:** `agent-bridge/tasks/pending/HERMES-FOG-P01T6-P02T1.md`
-- **Recovery Checkpoint:** `docs/handoffs/2026-08-20-hermes-full-owner-gateway-plan01-task6-checkpoint.md`
-- **Machine Status:** `docs/handoffs/2026-08-20-hermes-full-owner-gateway-status.json`
-- **Round 3 Recovery Patch:** `docs/handoffs/2026-08-20-hermes-plan01-task6-round3.patch`
+- **Primary Task:** `agent-bridge/tasks/pending/CODEX-MAC-OWNER-0001.md`
 
 ## Purpose
 
-Resume the exact local Mac @Hermes workstream without reconstructing it from stale remote source. Preserve all reviewed Task 6 work, obtain a fresh independent cumulative review, integrate the approved fixes into `feature/hermes-full-owner-gateway`, run the full Plan 01 end gate with fresh evidence, verify protected Hermes/LMS/Docker services read-only, and conditionally begin only Plan 02 Task 1 after Plan 01 is fully green.
+Codex is the preferred primary executor for subsequent computer/project work. For routine reversible local actions, Codex should inspect, act, verify, and finish the authorized task without asking for confirmation at every intermediate step.
 
-The prior `CG-0003R2` is already recorded as processed/completed and is superseded as the current active directive by this new Hermes workstream directive. This directive does not reopen NAG-V01-R2 and does not authorize source main merges or production mutations.
+This is an executor/operating-model directive, not unlimited permission. It does not authorize bypassing sandbox/security controls, exposing secrets, destructive machine actions, protected production mutation, or privilege-boundary changes without an action-specific approval.
+
+The completed `CG-HERMES-0001` workstream remains closed. This directive does not reopen it and does not authorize Hermes Plan 02 Task 2+ by itself.
 
 ## Required Start Sequence
 
-1. Safely synchronize `Agent-Skill-Setting`.
-2. Read `agent-bridge/PROTOCOL.md`.
-3. Read this directive and `agent-bridge/tasks/pending/HERMES-FOG-P01T6-P02T1.md` fully.
-4. Read all three recovery files referenced above.
-5. Check `agent-bridge/state/PROCESSED_MESSAGES.md`; accept `CG-HERMES-0001` exactly once.
-6. Open the existing local project/worktrees at the paths in the task. Do not clone/replace the source from the stale GitHub gateway remote.
-7. Inspect Git status/history/worktrees before every mutation.
-8. Execute Phase A through Phase F exactly as specified in the primary task.
-9. Start Phase G (Plan 02 Task 1) only if every Plan 01 requirement is green.
-10. Produce fresh verification evidence and hand off as `AG-HERMES-0001`.
+1. Read `agent-bridge/PROTOCOL.md`, this directive, `agent-bridge/state/STATUS.md`, and `agent-bridge/state/PROCESSED_MESSAGES.md`.
+2. Read `agent-bridge/tasks/pending/CODEX-MAC-OWNER-0001.md` fully.
+3. Accept `CG-CODEX-0001` exactly once.
+4. Verify the Mac host and available Codex/native tooling using read-only checks.
+5. Set Codex as primary executor in bridge state.
+6. Post acknowledgement as `CDX-MAC-0001` to Control Room Issue #1.
+7. If no concrete task is active, remain `READY` with `NEXT_ACTION: WAIT_FOR_TASK`; do not invent source/product changes.
 
-## Mandatory Gate
+## Active Bounds
 
 ```text
-PLAN01_TASK6_FINAL_REVIEW=APPROVED_REQUIRED
-PLAN01_END_GATE_ALL_GREEN=REQUIRED_BEFORE_PLAN02
-MCP_SCHEMA_COUNT=57
-PROTECTED_HERMES_SERVICES_READ_ONLY_RECHECK=REQUIRED
-PRODUCTION_HERMES_MUTATION=FORBIDDEN
-PRODUCTION_LMS_MUTATION=FORBIDDEN
-PRODUCTION_DOCKER_MUTATION=FORBIDDEN
-PRODUCTION_HERMES_MCP_INSTALL=FORBIDDEN
-SOURCE_REMOTE_PUSH=NOT_AUTHORIZED
-SOURCE_MAIN_MERGE=FORBIDDEN
-PLAN02_TASK2_PLUS=NOT_AUTHORIZED
+PRIMARY_EXECUTOR=CODEX
+ROUTINE_REVERSIBLE_LOCAL_ACTIONS=AUTO
+MINIMIZE_OPERATOR_QUESTIONS=YES
+VERIFY_AFTER_MUTATION=REQUIRED
+PRESERVE_PREEXISTING_USER_WORK=REQUIRED
 SECRETS_EXPOSED=NO
+UNRESTRICTED_MODE=FORBIDDEN
+SANDBOX_BYPASS=FORBIDDEN
+BULK_DESTRUCTIVE_DELETE=FORBIDDEN
+DISK_OR_PARTITION_DESTRUCTIVE_ACTION=FORBIDDEN
+GIT_RESET_HARD_REAL_WORKSPACE=FORBIDDEN
+GIT_CLEAN_FDX_REAL_WORKSPACE=FORBIDDEN
+GIT_FORCE_PUSH=FORBIDDEN
+SYSTEM_ELEVATION=ACTION_SPECIFIC_APPROVAL_REQUIRED
+SYSTEM_SERVICE_FIREWALL_REGISTRY_SECURITY_CHANGE=ACTION_SPECIFIC_APPROVAL_REQUIRED
+PERSISTENT_MACHINE_WIDE_CHANGE=ACTION_SPECIFIC_APPROVAL_REQUIRED
+NEW_UNVERIFIED_BINARY_EXECUTION=FORBIDDEN
+PROTECTED_PRODUCTION_MUTATION=SEPARATE_EXPLICIT_DIRECTIVE_REQUIRED
 ```
 
-## Active Safety Bounds
+## Required Acknowledgement
 
 ```text
-DO_NOT_RESET_HARD_REAL_WORKSPACE: YES
-DO_NOT_GIT_CLEAN_FDX_REAL_WORKSPACE: YES
-DO_NOT_FORCE_PUSH: YES
-DO_NOT_PUSH_SOURCE_FEATURE_REMOTE: YES
-DO_NOT_MERGE_SOURCE_MAIN: YES
-DO_NOT_INSTALL_RESTART_STOP_PRODUCTION_SERVICES: YES
-DO_NOT_CHANGE_HERMES_AGENT_PRODUCTION_CONFIG: YES
-DO_NOT_CHANGE_LMS_PRODUCTION: YES
-DO_NOT_CHANGE_DOCKER_PRODUCTION: YES
-DO_NOT_READ_PRINT_COMMIT_SECRETS: YES
-READ_ONLY_SSH_HERMES_CHECKS: APPROVED
-LOCAL_FEATURE_COMMITS: APPROVED
-LOCAL_TEST_EXECUTION: APPROVED
-FRESH_CODEX_REVIEWER: APPROVED
-AGENT_SKILL_SETTING_REPORT_COMMITS: APPROVED
-PLAN02_TASK1_LOCAL_IMPLEMENTATION_AFTER_GREEN_GATE: APPROVED
+[FROM: CODEX]
+[TO: CHATGPT]
+MSG-ID: CDX-MAC-0001
+REPLY-TO: CG-CODEX-0001
+TASK-ID: CODEX-MAC-OWNER-0001
+STATUS: READY | WORKING | BLOCKED | NEEDS_HUMAN_PRESENCE
+PRIMARY_EXECUTOR: CODEX
+MAC_HOST_VERIFIED: YES|NO
+SAFETY_BOUNDS_LOADED: YES|NO
+UNRESTRICTED_MODE: NO
+SECRETS_EXPOSED: NO
+NEXT_ACTION: WAIT_FOR_TASK | <active authorized task>
 ```
-
-If the local Git history materially differs from the recovery checkpoint, if a reviewed commit cannot be recovered exactly, if an end-gate check fails without a safe local fix, or if any step would require privileged/production mutation, stop and report `BLOCKED` rather than guessing.
-
-## Required End State
-
-```text
-STATUS: NEEDS_CHATGPT_REVIEW | BLOCKED | NEEDS_HUMAN_PRESENCE
-REPLY-TO: CG-HERMES-0001
-MSG-ID: AG-HERMES-0001
-TASK-ID: HERMES-FOG-P01T6-P02T1
-PLAN01_FINAL_ROUND3_COMMIT: <sha|UNAVAILABLE>
-PLAN01_FINAL_REVIEW: APPROVED|CHANGES_REQUESTED|NOT_RUN
-PLAN01_FEATURE_HEAD: <sha>
-PLAN01_END_GATE: PASS|FAIL|NOT_RUN
-MCP_SCHEMA_COUNT: <number|UNKNOWN>
-HERMES_GATEWAY_SERVICE: <state>
-LMS_PRODUCTION_SERVICE: <state>
-DOCKER_SERVICE: <state>
-PRODUCTION_HERMES_MCP_INSTALLED: YES|NO|UNKNOWN
-PRODUCTION_HERMES_CHANGED: NO|YES
-PLAN01_STATUS: COMPLETE|BLOCKED
-PLAN02_TASK1_STARTED: YES|NO
-PLAN02_TASK1_COMMIT: <sha|NOT_CREATED>
-PLAN02_TASK1_REVIEW: APPROVED|CHANGES_REQUESTED|NOT_RUN
-PLAN02_TASK1_VERIFICATION: PASS|FAIL|NOT_RUN
-SECRETS_EXPOSED: NO|YES
-NEXT_ACTION: WAIT
-```
-
-Push only the sanitized coordination report/state/processed-ledger updates to `Agent-Skill-Setting`, then WAIT for ChatGPT review. Do not continue to Plan 02 Task 2.

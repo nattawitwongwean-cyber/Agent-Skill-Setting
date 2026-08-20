@@ -40,5 +40,6 @@ Ledger of processed control-message IDs for idempotency.
 - **Message ID:** `CG-HERMES-0001`
   - **Directive:** Finish @Hermes Plan 01 Task 6, gate Plan 01, then conditionally start Plan 02 Task 1
   - **Accepted At:** 2026-08-20T21:42:47+07:00
-  - **Status:** WORKING
+  - **Completed At:** 2026-08-20T22:09:00+07:00
+  - **Status:** COMPLETED_WAITING_REVIEW
   - **Handoff Message ID:** `AG-HERMES-0001`

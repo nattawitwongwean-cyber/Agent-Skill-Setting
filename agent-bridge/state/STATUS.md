@@ -1,76 +1,55 @@
 # Agent Bridge Status
 
 Agent:
-Antigravity
+Codex
 
 Current Task:
-HERMES-FOG-P01T6-P02T1 (Finish @Hermes Plan 01 Task 6, gate Plan 01, then conditionally start Plan 02 Task 1)
+CODEX-MAC-OWNER-0001 (Establish Codex as primary Mac computer/project executor)
 
 State:
-NEEDS_CHATGPT_REVIEW
+READY
 
 Progress:
-CG-HERMES-0001 COMPLETED WITH FRESH SOURCE/PRODUCTION VERIFICATION; AG-HERMES-0001 HANDOFF SUBMITTED
+CG-CODEX-0001 ISSUED; CODEX PRIMARY-EXECUTOR ROLE READY FOR ACCEPTANCE
 
 Last Successful Step:
-Completed Plan 01 Task 6 and full Plan 01 end gate, completed authorized Plan 02 Task 1, obtained fresh independent approvals, reran full normal-worktree regressions, confirmed real Hermes protected services remained active with no production hermes-mcp-* installation, archived the task record, and posted AG-HERMES-0001 to Control Room Issue #1.
+Completed and archived CG-HERMES-0001, then received explicit human instruction to make Codex the primary executor for computer management and routine end-to-end work.
 
 Current Step:
-Waiting for ChatGPT review. No further execution is authorized under CG-HERMES-0001.
+Codex should accept `CG-CODEX-0001` exactly once, verify the Mac host/tooling read-only, load the safety bounds, and acknowledge as `CDX-MAC-0001`.
 
 Blocking Issue:
 NONE
 
 Human Approval:
-GRANTED — explicit instruction to continue and finish CG-HERMES-0001 within the directive bounds.
+GRANTED — Codex may independently perform routine reversible non-destructive local actions within authorized workspaces. Privileged, destructive, security-sensitive, persistent machine-wide, or protected-production actions still require action-specific authorization.
 
 Human Presence Needed:
-NO
+NO — unless an exact future action genuinely requires credential/UAC/manual interaction.
 
 ChatGPT Review:
-REQUIRED — review `agent-bridge/reports/2026-08-20/HERMES-FOG-P01T6-P02T1.md` / `AG-HERMES-0001`.
+NOT REQUIRED BEFORE ROLE ACKNOWLEDGEMENT
 
-Source Feature Branch:
-feature/hermes-full-owner-gateway
+Primary Executor:
+CODEX
 
-Source Feature Head:
-bf489e8de3f14301107dab1dcee9eb8d75b893c8
+Unrestricted Mode:
+FORBIDDEN
 
-Plan 01 Status:
-COMPLETE
+Secrets Exposure:
+FORBIDDEN
 
-Plan 02 Task 1 Status:
-COMPLETE
+Previous Hermes Directive:
+CG-HERMES-0001 COMPLETE / CLOSED; Plan 02 Task 2+ remains outside that directive.
 
-Plan 02 Task 2+:
-NOT AUTHORIZED / NOT STARTED
-
-Production Hermes Mutation:
-NO
-
-Production LMS Mutation:
-NO
-
-Production Docker Mutation:
-NO
-
-Source Push / Main Merge:
-NO / NO
-
-Task Record:
-agent-bridge/tasks/completed/HERMES-FOG-P01T6-P02T1.md
+Primary Task:
+agent-bridge/tasks/pending/CODEX-MAC-OWNER-0001.md
 
 Current Directive:
 agent-bridge/control/CURRENT_DIRECTIVE.md
 
-Latest Report:
-agent-bridge/reports/2026-08-20/HERMES-FOG-P01T6-P02T1.md
-
-Control Room Handoff:
-Issue #1 comment ID 5357854408 (`AG-HERMES-0001`)
-
 Next Action:
-WAIT
+CODEX_ACCEPT_AND_ACKNOWLEDGE
 
 Updated:
-2026-08-20T22:09:00+07:00
+2026-08-21T01:10:00+07:00

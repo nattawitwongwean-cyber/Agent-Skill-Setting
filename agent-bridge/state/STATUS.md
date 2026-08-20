@@ -7,28 +7,55 @@ Current Task:
 HERMES-FOG-P01T6-P02T1 (Finish @Hermes Plan 01 Task 6, gate Plan 01, then conditionally start Plan 02 Task 1)
 
 State:
-WORKING
+NEEDS_CHATGPT_REVIEW
 
 Progress:
-CG-HERMES-0001 ACCEPTED EXACTLY ONCE; DIRECT MAC EXECUTOR ACTIVE
+CG-HERMES-0001 COMPLETED WITH FRESH SOURCE/PRODUCTION VERIFICATION; AG-HERMES-0001 HANDOFF READY
 
 Last Successful Step:
-Recovered direct @Mac access, read protocol/directive/task/recovery artifacts, verified the directive was not previously processed, and accepted `CG-HERMES-0001` in the processed-message ledger.
+Completed Plan 01 Task 6 and full Plan 01 end gate, completed authorized Plan 02 Task 1, obtained fresh independent approvals, reran full normal-worktree regressions, and confirmed real Hermes protected services remained active with no production hermes-mcp-* installation.
 
 Current Step:
-Phase A — inspect the existing local project, feature worktree, and round-3 worker worktree; recover/commit the exact round-3 Task 6 fix without disturbing unrelated local work.
+Handoff submitted for ChatGPT review. No further execution is authorized under CG-HERMES-0001.
 
 Blocking Issue:
 NONE
 
 Human Approval:
-GRANTED — explicit current instruction to continue the active @Hermes workstream, within the directive safety bounds and with no production mutation.
+GRANTED — explicit instruction to continue and finish CG-HERMES-0001 within the directive bounds.
 
 Human Presence Needed:
-NO — direct @Mac owner gateway is available in this session.
+NO
 
 ChatGPT Review:
-REQUIRED AFTER AG-HERMES-0001 HANDOFF
+REQUIRED — review `agent-bridge/reports/2026-08-20/HERMES-FOG-P01T6-P02T1.md` / `AG-HERMES-0001`.
+
+Source Feature Branch:
+feature/hermes-full-owner-gateway
+
+Source Feature Head:
+bf489e8de3f14301107dab1dcee9eb8d75b893c8
+
+Plan 01 Status:
+COMPLETE
+
+Plan 02 Task 1 Status:
+COMPLETE
+
+Plan 02 Task 2+:
+NOT AUTHORIZED / NOT STARTED
+
+Production Hermes Mutation:
+NO
+
+Production LMS Mutation:
+NO
+
+Production Docker Mutation:
+NO
+
+Source Push / Main Merge:
+NO / NO
 
 Primary Task:
 agent-bridge/tasks/pending/HERMES-FOG-P01T6-P02T1.md
@@ -36,8 +63,11 @@ agent-bridge/tasks/pending/HERMES-FOG-P01T6-P02T1.md
 Current Directive:
 agent-bridge/control/CURRENT_DIRECTIVE.md
 
-Recovery Checkpoint:
-docs/handoffs/2026-08-20-hermes-full-owner-gateway-plan01-task6-checkpoint.md
+Latest Report:
+agent-bridge/reports/2026-08-20/HERMES-FOG-P01T6-P02T1.md
+
+Next Action:
+WAIT
 
 Updated:
-2026-08-20T21:43:00+07:00
+2026-08-20T22:09:00+07:00

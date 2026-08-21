@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "transferId": "HERMES-HRP-0001",
+  "createdAt": "2026-08-21T17:24:00+07:00",
+  "purpose": "Move all Hermes Reliability Pack development inputs to a Hermes-owned development workspace without modifying protected production services.",
+  "destinationExecutor": "HERMES_AGENTS",
+  "destinationHost": "Hermes/linux",
+  "controlRepository": {
+    "repo": "nattawitwongwean-cyber/Agent-Skill-Setting",
+    "branch": "main",
+    "requiredFiles": [
+      "docs/superpowers/specs/2026-08-21-hermes-reliability-pack-design.md",
+      "agent-bridge/reports/2026-08-20/HERMES-FOG-P01T6-P02T1.md",
+      "agent-bridge/control/CURRENT_DIRECTIVE.md",
+      "agent-bridge/control/APPROVALS.md",
+      "agent-bridge/state/STATUS.md",
+      "agent-bridge/state/PROCESSED_MESSAGES.md",
+      "agent-bridge/tasks/pending/HERMES-CHATGPT-APP-0001.md",
+      "agent-bridge/transfers/HERMES-HRP-0001/README.md",
+      "agent-bridge/tasks/pending/HERMES-HRP-TRANSFER-0001.md"
+    ]
+  },
+  "sourceBaseline": {
+    "repositoryKind": "local Mac git worktree",
+    "worktree": "/Users/nattawit/Documents/Codex/2026-08-19/files-pasted-by-the-user-master/work/mac-owner-gateway/.worktrees/hermes-full-owner-gateway",
+    "branch": "feature/hermes-full-owner-gateway",
+    "expectedHead": "bf489e8de3f14301107dab1dcee9eb8d75b893c8",
+    "transferMode": "copy full tracked source tree, tests, package metadata, scripts, and docs required to build/test; preserve source on Mac",
+    "exclude": [
+      ".git worktree administrative metadata that would be invalid on Hermes",
+      "node_modules",
+      "dist/build outputs unless required only as reproducibility evidence",
+      "coverage/cache/temp files",
+      ".env and secret-bearing environment files",
+      "browser profiles/cookies/session databases",
+      "private keys/tokens/tunnel credentials"
+    ]
+  },
+  "knownDevelopmentSurfaces": [
+    "src/workers/runtime-layout.ts",
+    "src/workers/persistence.ts",
+    "src/workers/worktree.ts",
+    "src/workers/manager.ts",
+    "test/workers/runtime-layout.test.mjs",
+    "gateway_health implementation and its tests (exact paths must be discovered from the transferred source before modification)",
+    "Hermes runtime doctor entry point and tests (new exact paths to follow repository conventions)",
+    "Agent Bridge machine-readable directive/execution/acceptance state and reconciliation files",
+    "ChatGPT app acceptance/preflight/checkpoint doctor and tests"
+  ],
+  "productionBoundary": {
+    "hermes-gateway.service": "READ_ONLY_NO_RESTART_STOP_RECONFIGURE",
+    "nattawit-lms-production-nginx.service": "READ_ONLY_NO_RESTART_STOP_RECONFIGURE",
+    "docker.service": "READ_ONLY_NO_RESTART_STOP_RECONFIGURE",
+    "existingSecureTunnel": "PRESERVE_REUSE",
+    "existingHermesPersonalApp": "PRESERVE_UNLESS_DESCRIPTOR_REFRESH_REQUIRED"
+  },
+  "sourceTreeTransferState": "PENDING_MAC_CONTROL_ROUTE",
+  "controlFilesTransferState": "READY_VIA_GITHUB",
+  "completionEvidenceRequired": [
+    "Hermes destination development path",
+    "source HEAD verified equals expectedHead or explicit divergence report",
+    "tracked-file count at source and destination",
+    "sanitized manifest hash/file list comparison",
+    "no secret-bearing files transferred",
+    "protected production services unchanged"
+  ]
+}
